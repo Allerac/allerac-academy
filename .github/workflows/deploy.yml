@@ -1,10 +1,9 @@
 # Deploys app/ to Cloudflare (Worker allerac-academy, academy.allerac.ai) on every push to main.
 #
-# Optional alternative to Cloudflare Workers Builds. It stays disabled until the
-# repository variable DEPLOY_WITH_GITHUB_ACTIONS is set to "true", so the two
-# never deploy at the same time. It also needs these repository secrets:
-#   CLOUDFLARE_API_TOKEN   token with Workers Scripts Edit, D1 Edit and
-#                          Workers Routes/Custom Domains Edit on allerac.ai
+# This is the deploy route for this repo (Cloudflare Workers Builds is not used).
+# The job runs in the GitHub environment "production", which holds these secrets:
+#   CLOUDFLARE_API_TOKEN   token that can deploy the allerac-academy Worker and
+#                          apply D1 migrations (Workers Scripts Edit, D1 Edit)
 #   CLOUDFLARE_ACCOUNT_ID  the Cloudflare account id
 name: Deploy
 
@@ -20,8 +19,10 @@ concurrency:
 
 jobs:
   deploy:
-    if: vars.DEPLOY_WITH_GITHUB_ACTIONS == 'true'
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://academy.allerac.ai
     defaults:
       run:
         working-directory: app
