@@ -123,22 +123,18 @@ Resources:
 
 The first deploy was done through the Cloudflare API, with the static files bundled inside the Worker, because no Wrangler login was available. The first `wrangler deploy` replaces it with the standard setup (Worker + static assets).
 
-### Automatic deploys (recommended: Workers Builds)
+### Automatic deploys (GitHub Actions)
 
-In the Cloudflare dashboard: **Workers & Pages > allerac-academy > Settings > Builds > Connect**, pick GitHub, install or authorize the Cloudflare app for the `Allerac` organization with access to `allerac-academy`, then set:
+`.github/workflows/deploy.yml` deploys on every push to `main` that touches `app/`, `content/` or `tutor/`, and can also be run by hand (`workflow_dispatch`). It runs typecheck and tests, applies remote D1 migrations, then runs `wrangler deploy`.
 
-| Setting | Value |
+The job runs in the GitHub environment **`production`**, which holds these secrets:
+
+| Secret | Value |
 | --- | --- |
-| Branch | `main` |
-| Root directory | `app` |
-| Build command | *(empty)* |
-| Deploy command | `npm run deploy` (applies D1 migrations, then `wrangler deploy`) |
+| `CLOUDFLARE_API_TOKEN` | Account API token that can deploy the `allerac-academy` Worker and apply D1 migrations (Workers Scripts Edit, D1 Edit) |
+| `CLOUDFLARE_ACCOUNT_ID` | The Cloudflare account id |
 
-Every merge to `main` then deploys. Cloudflare creates the build API token itself.
-
-### Alternative: GitHub Actions
-
-`.github/workflows/deploy.yml` does the same with `cloudflare/wrangler-action`. It is off by default. To use it instead of Workers Builds, add the repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` and set the repo variable `DEPLOY_WITH_GITHUB_ACTIONS=true`. Do not enable both.
+Cloudflare Workers Builds is not used, because the Git connection could not list the repository.
 
 ### Manual deploy
 
