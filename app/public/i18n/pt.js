@@ -25,7 +25,7 @@ export default {
   "lesson.back": "Voltar",
   "lesson.next": "Continuar",
   "lesson.problem": "O problema",
-  "lesson.problemHint": "Tente responder antes de seguir. Não existe resposta errada aqui.",
+  "lesson.problemHint": "Não existe resposta errada aqui.",
   "lesson.problemPlaceholder": "Escreva sua ideia (opcional)…",
   "lesson.problemCta": "Tentei, vamos lá",
   "lesson.problemThanks": "Boa! Guarde sua ideia: você vai compará-la com o que vem agora.",
