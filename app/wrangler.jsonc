@@ -21,13 +21,13 @@
   },
 
   "routes": [{ "pattern": "academy.allerac.ai", "custom_domain": true }],
+  "workers_dev": false,
 
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "academy",
-      // TODO: replace with the id printed by `wrangler d1 create academy`.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "a6a0b4c2-0f6e-42a5-b679-14d208050ca5",
       "migrations_dir": "migrations"
     }
   ],
