@@ -2,6 +2,8 @@
 // translate the values (keep the keys) and register it in i18n/index.js.
 export default {
   "app.name": "Allerac Academy",
+  "app.brand": "Allerac",
+  "app.product": "Academy",
   "app.loading": "Carregando…",
   "app.error": "Algo deu errado. Confira sua conexão e tente de novo.",
   "app.retry": "Tentar de novo",

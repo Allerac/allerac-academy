@@ -131,7 +131,10 @@ function mapPage() {
 
   return el("main", { class: "page map-page" }, [
     el("header", { class: "map-header" }, [
-      el("div", { class: "brand" }, [el("img", { src: "/favicon.svg", alt: "", width: 32, height: 32 }), el("span", {}, t("app.name"))]),
+      el("div", { class: "brand" }, [
+        el("img", { src: "/icons/icon.svg", alt: "", width: 40, height: 40 }),
+        el("span", { class: "brand-name" }, [el("strong", {}, t("app.brand")), " ", el("span", {}, t("app.product"))]),
+      ]),
     ]),
     el("section", { class: "intro", html: course.introHtml }),
     goal,
