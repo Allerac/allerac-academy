@@ -113,31 +113,49 @@ SELECT lesson_id, block_index, COUNT(*) AS taps
 FROM stuck_events GROUP BY lesson_id, block_index ORDER BY taps DESC;
 ```
 
-## Deploy (not done yet)
+## Deploy
 
-Nothing has been created in Cloudflare yet. Steps, once:
+Live at **https://academy.allerac.ai** (account Allerac, zone `allerac.ai`).
+
+Resources:
+- Worker `allerac-academy`, custom domain `academy.allerac.ai`, `workers.dev` disabled.
+- D1 database `academy` (`a6a0b4c2-0f6e-42a5-b679-14d208050ca5`), migration `0001_initial.sql` applied.
+
+The first deploy was done through the Cloudflare API, with the static files bundled inside the Worker, because no Wrangler login was available. The first `wrangler deploy` replaces it with the standard setup (Worker + static assets).
+
+### Automatic deploys (recommended: Workers Builds)
+
+In the Cloudflare dashboard: **Workers & Pages > allerac-academy > Settings > Builds > Connect**, pick GitHub, install or authorize the Cloudflare app for the `Allerac` organization with access to `allerac-academy`, then set:
+
+| Setting | Value |
+| --- | --- |
+| Branch | `main` |
+| Root directory | `app` |
+| Build command | *(empty)* |
+| Deploy command | `npm run deploy` (applies D1 migrations, then `wrangler deploy`) |
+
+Every merge to `main` then deploys. Cloudflare creates the build API token itself.
+
+### Alternative: GitHub Actions
+
+`.github/workflows/deploy.yml` does the same with `cloudflare/wrangler-action`. It is off by default. To use it instead of Workers Builds, add the repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` and set the repo variable `DEPLOY_WITH_GITHUB_ACTIONS=true`. Do not enable both.
+
+### Manual deploy
 
 ```bash
 cd app
-npx wrangler login                                  # or CLOUDFLARE_API_TOKEN
-npx wrangler d1 create academy                      # copy the database_id into wrangler.jsonc
-npm run db:migrate:remote                           # apply migrations to the remote D1
+npx wrangler login       # or CLOUDFLARE_API_TOKEN
+npm run deploy           # D1 migrations (remote) + wrangler deploy
 ```
+
+### Tutor (later)
 
 When the tutor unit exists in Allerac One:
 
 ```bash
 npx wrangler secret put BOT_API_KEY
-# set ALLERAC_ONE_BASE_URL and ALLERAC_ONE_DOMAIN_SLUG in wrangler.jsonc "vars" (or the dashboard)
+# set ALLERAC_ONE_BASE_URL and ALLERAC_ONE_DOMAIN_SLUG in wrangler.jsonc "vars"
 ```
-
-Then deploy:
-
-```bash
-npm run deploy                                      # wrangler deploy; also attaches academy.allerac.ai
-```
-
-The `routes` entry with `custom_domain: true` makes Wrangler create the `academy.allerac.ai` DNS record and certificate in the `allerac.ai` zone on the first deploy. Later, connect the repo with Workers Builds (root directory `app`, deploy command `npx wrangler deploy`) so every merge to `main` deploys automatically, and run `npm run db:migrate:remote` whenever a new migration is added.
 
 ## TODO
 

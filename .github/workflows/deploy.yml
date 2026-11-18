@@ -1,0 +1,51 @@
+# Deploys app/ to Cloudflare (Worker allerac-academy, academy.allerac.ai) on every push to main.
+#
+# Optional alternative to Cloudflare Workers Builds. It stays disabled until the
+# repository variable DEPLOY_WITH_GITHUB_ACTIONS is set to "true", so the two
+# never deploy at the same time. It also needs these repository secrets:
+#   CLOUDFLARE_API_TOKEN   token with Workers Scripts Edit, D1 Edit and
+#                          Workers Routes/Custom Domains Edit on allerac.ai
+#   CLOUDFLARE_ACCOUNT_ID  the Cloudflare account id
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", "content/**", "tutor/**", ".github/workflows/deploy.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: vars.DEPLOY_WITH_GITHUB_ACTIONS == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - name: Apply D1 migrations
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: app
+          command: d1 migrations apply academy --remote
+      - name: Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: app
+          command: deploy
