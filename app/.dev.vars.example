@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local development. Never commit .dev.vars.
+# With BOT_API_KEY empty (or Allerac One unreachable) the tutor shows as unavailable.
+BOT_API_KEY=
+# Optional local overrides of the vars in wrangler.jsonc:
+# ALLERAC_ONE_BASE_URL=http://localhost:3000
+# ALLERAC_ONE_DOMAIN_SLUG=academy-tutor
