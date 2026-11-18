@@ -49,7 +49,7 @@ await page.getByText("Bloco 1 de 4").waitFor();
 const html = await page.content();
 assert.ok(!html.includes("Notas para o tutor"), "tutor notes must never reach the browser");
 await shot("03-block");
-await page.getByRole("button", { name: /Não entendi/ }).click();
+await page.getByRole("button", { name: "Quero saber mais" }).click();
 await page.locator(".tutor-sheet.open").waitFor();
 if (EXPECT_TUTOR === "unavailable") {
   await page.getByText("Tutor indisponível no momento").waitFor();

@@ -55,7 +55,7 @@ export default {
   "tutor.open": "Perguntar ao tutor",
   "tutor.title": "Tutor",
   "tutor.close": "Fechar tutor",
-  "tutor.explainBetter": "Explicar melhor",
+  "tutor.explainBetter": "Quero saber mais",
   "tutor.explainBlock": "Explique melhor este bloco, por favor.",
   "tutor.explainSelection": "Explique melhor este trecho, por favor.",
   "tutor.selected": "Trecho selecionado",
@@ -65,5 +65,5 @@ export default {
   "tutor.unavailable": "Tutor indisponível no momento",
   "tutor.unavailableHint": "O resto da lição funciona normalmente. Tente o tutor mais tarde.",
   "tutor.rateLimited": "Muitas perguntas seguidas. Respire um pouco e tente daqui a alguns minutos.",
-  "tutor.empty": "Pergunte qualquer coisa sobre esta lição. Dica: selecione um trecho do texto e toque em \"Explicar melhor\".",
+  "tutor.empty": "Pergunte qualquer coisa sobre esta lição. Dica: selecione um trecho do texto e toque em \"Quero saber mais\".",
 };
