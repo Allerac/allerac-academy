@@ -4,6 +4,9 @@ Um curso prático de "comece a trabalhar hoje" em desenvolvimento com IA. Você 
 
 > Os módulos são escritos conforme o curso avança. Por enquanto, só os módulos 0 e 1 estão completos.
 
+- [Módulo 0](00-first-day/module.md)
+- [Módulo 1](01-ai-beyond-chat/module.md)
+
 ## Módulo 0: Primeiro dia de trabalho
 
 Usar IA para resolver algo real, ter conta no GitHub e um primeiro repositório, fazer o primeiro commit e abrir a primeira issue. Tudo pelo navegador ou pelo celular, sem instalar nada.
