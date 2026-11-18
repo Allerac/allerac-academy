@@ -10,8 +10,8 @@ content/    Course content
   pt/       Portuguese (written first)
   en/       English (translated after approval)
   es/       Spanish (translated after approval)
-app/        The learning app (coming soon)
-tutor/      AI tutor prompts and rules (coming soon)
+app/        The learning site: Cloudflare Worker + static assets (see app/README.md)
+tutor/      AI tutor prompts and rules (English)
 ```
 
 ## Start here
