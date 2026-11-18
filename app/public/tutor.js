@@ -1,4 +1,4 @@
-// Tutor panel (bottom sheet) and the "Explain better" button on selected text.
+// Tutor panel (bottom sheet) and the "learn more" button on selected text.
 // If the tutor is not configured or Allerac One fails, the panel shows
 // "Tutor indisponível no momento" and the rest of the lesson keeps working.
 

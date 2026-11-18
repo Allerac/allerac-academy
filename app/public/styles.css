@@ -99,7 +99,7 @@ p { margin: 0 0 0.75rem; }
 /* Lesson player */
 .lesson-page { padding-top: 8px; }
 .lesson-top { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 8px; padding: 8px 0; background: var(--bg); }
-.lesson-progress { flex: 1; display: flex; gap: 4px; }
+.lesson-progress { flex: 1; min-width: 0; display: flex; gap: 4px; }
 .lesson-progress span { flex: 1; height: 8px; border-radius: 999px; background: #e3e0ee; transition: background 0.25s ease; }
 .lesson-progress span.filled { background: var(--success); }
 .lesson-title { margin: 4px 0 12px; }
@@ -127,7 +127,8 @@ textarea:focus { border-color: #a5b4fc; outline: none; }
 .rating-btn.selected { border-color: var(--primary); background: var(--primary); color: #fff; }
 .rating-legend { display: flex; justify-content: space-between; }
 .form-error { color: #b91c1c; margin: 0; }
-.form-actions { display: flex; justify-content: flex-end; gap: 4px; flex-wrap: wrap; margin-top: 8px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 4px; flex-wrap: wrap; margin-top: 12px; }
+.form-actions .btn-primary { width: 100%; }
 .done-screen { padding: 32px 20px; }
 .done-badge { font-size: 3.5rem; animation: pop 0.5s ease; }
 @keyframes pop { 0% { transform: scale(0.4); } 70% { transform: scale(1.15); } 100% { transform: scale(1); } }
@@ -135,9 +136,10 @@ textarea:focus { border-color: #a5b4fc; outline: none; }
 
 .lesson-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, 0.96); border-top: 1px solid var(--border); backdrop-filter: blur(8px); }
 .lesson-nav .btn-primary { flex: 1; max-width: 420px; margin-left: auto; }
-.tutor-fab { position: fixed; right: 16px; bottom: calc(var(--nav-h) + 12px + env(safe-area-inset-bottom)); z-index: 11; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: var(--brand-deep); color: #fff; font: inherit; font-weight: 650; box-shadow: 0 6px 18px rgba(30, 27, 75, 0.3); cursor: pointer; }
+.tutor-open { flex: none; display: inline-flex; align-items: center; gap: 4px; min-height: 36px; height: 40px; padding: 0 10px; border-radius: 999px; border: 0; background: var(--brand-deep); color: #fff; font: inherit; font-size: 0.82rem; font-weight: 650; cursor: pointer; white-space: nowrap; }
+.tutor-open:active { transform: scale(0.97); }
 
-/* Selection "Explain better" */
+/* Selection "learn more" button */
 .selection-explain { position: fixed; z-index: 30; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--primary); color: #fff; font: inherit; font-weight: 700; box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35); cursor: pointer; }
 
 /* Tutor sheet */

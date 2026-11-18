@@ -207,17 +207,22 @@ async function lessonPage(lessonId) {
   progressBar.append(...segments);
 
   const closeLink = el("a", { class: "icon-btn", href: "#/", "aria-label": t("lesson.close") }, "✕");
-  const tutorBtn = el("button", { class: "tutor-fab", type: "button", onclick: openTutor }, [el("span", { "aria-hidden": "true" }, "✦"), t("tutor.open")]);
-  const top = el("header", { class: "lesson-top" }, [closeLink, progressBar]);
+  const tutorBtn = el("button", { class: "tutor-open", type: "button", onclick: openTutor, "aria-label": t("tutor.open") }, [
+    el("span", { "aria-hidden": "true" }, "✦"),
+    el("span", {}, t("tutor.title")),
+  ]);
+  const top = el("header", { class: "lesson-top" }, [closeLink, progressBar, tutorBtn]);
   const body = el("div", { class: "lesson-screen" });
   const backBtn = el("button", { class: "btn btn-ghost", type: "button" }, t("lesson.back"));
   const nextBtn = el("button", { class: "btn btn-primary", type: "button" }, t("lesson.next"));
-  const nav = el("footer", { class: "lesson-nav" }, [backBtn, nextBtn]);
+  const skipBtn = el("button", { class: "btn btn-primary", type: "button" }, t("lesson.feedbackSkip"));
+  const nav = el("footer", { class: "lesson-nav" }, [backBtn, nextBtn, skipBtn]);
 
   backBtn.addEventListener("click", () => go(index - 1));
   nextBtn.addEventListener("click", () => advance());
+  skipBtn.addEventListener("click", () => finishLesson());
 
-  render(el("main", { class: "page lesson-page" }, [top, el("p", { class: "lesson-title small muted" }, `${lesson.number} · ${lesson.title}`), body, tutorBtn, nav]));
+  render(el("main", { class: "page lesson-page" }, [top, el("p", { class: "lesson-title small muted" }, `${lesson.number} · ${lesson.title}`), body, nav]));
   mountTutor({
     lessonId: lesson.id,
     available: tutorAvailable,
@@ -239,7 +244,9 @@ async function lessonPage(lessonId) {
     segments.forEach((s, n) => s.classList.toggle("filled", n < index || (screen.type === "done" && n <= index)));
     progressBar.setAttribute("aria-valuenow", String(index));
     backBtn.hidden = index === 0 || screen.type === "done";
-    nav.hidden = screen.type === "wrapup" || screen.type === "done";
+    nav.hidden = screen.type === "done";
+    nextBtn.hidden = screen.type === "wrapup" || screen.type === "done";
+    skipBtn.hidden = screen.type !== "wrapup";
     tutorBtn.hidden = screen.type === "done";
     nextBtn.textContent = screen.type === "problem" ? t("lesson.problemCta") : screen.type === "mission" ? t("lesson.missionDone") : t("lesson.next");
     body.replaceChildren(renderScreen(screen));
@@ -284,7 +291,7 @@ async function lessonPage(lessonId) {
         ]);
       case "block": {
         const b = screen.block;
-        const stuckBtn = el("button", { class: "btn btn-outline stuck-btn", type: "button" }, ["🤔 ", t("lesson.didntGetIt")]);
+        const stuckBtn = el("button", { class: "btn btn-outline stuck-btn", type: "button" }, t("tutor.explainBetter"));
         stuckBtn.addEventListener("click", () => {
           api.stuck(lesson.id, b.index).catch(() => {});
           stuckBtn.classList.add("pressed");
@@ -330,10 +337,6 @@ async function lessonPage(lessonId) {
     );
     const hardest = el("textarea", { rows: 3, maxlength: 2000, placeholder: t("lesson.feedbackHardestPlaceholder"), id: "hardest" });
     const submit = el("button", { class: "btn btn-primary", type: "submit" }, t("lesson.feedbackSubmit"));
-    const skip = el("button", { class: "btn btn-ghost", type: "button" }, t("lesson.feedbackSkip"));
-    const back = el("button", { class: "btn btn-ghost", type: "button" }, t("lesson.back"));
-    back.addEventListener("click", () => go(index - 1));
-    skip.addEventListener("click", finishLesson);
     const form = el("form", { class: "feedback-form card" }, [
       el("h2", {}, t("lesson.feedbackTitle")),
       el("label", { for: "hardest" }, t("lesson.feedbackHardest")),
@@ -342,7 +345,7 @@ async function lessonPage(lessonId) {
       ratings,
       el("div", { class: "rating-legend small muted" }, [el("span", {}, t("lesson.feedbackClarityLow")), el("span", {}, t("lesson.feedbackClarityHigh"))]),
       error,
-      el("div", { class: "form-actions" }, [back, skip, submit]),
+      el("div", { class: "form-actions" }, [submit]),
     ]);
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
