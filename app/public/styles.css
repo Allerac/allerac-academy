@@ -63,6 +63,10 @@ p { margin: 0 0 0.75rem; }
 /* Map */
 .map-page { display: grid; gap: 16px; }
 .map-header { display: flex; align-items: center; justify-content: space-between; }
+.lang-switch { display: inline-flex; flex: none; padding: 3px; gap: 2px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); }
+.lang-btn { min-width: 44px; min-height: 36px; padding: 0 8px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font: inherit; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; cursor: pointer; }
+.lang-btn:hover { color: var(--brand-deep); }
+.lang-btn.active { background: var(--brand-deep); color: #fff; }
 .brand { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; }
 .brand img { border-radius: 50%; box-shadow: 0 2px 8px rgba(76, 29, 149, 0.18); }
 .brand-name strong { font-weight: 800; color: var(--brand-violet); }

@@ -1,6 +1,6 @@
 // Tutor panel (bottom sheet) and the "learn more" button on selected text.
 // If the tutor is not configured or Allerac One fails, the panel shows
-// "Tutor indisponível no momento" and the rest of the lesson keeps working.
+// an "unavailable" notice (tutor.unavailable) and the rest of the lesson keeps working.
 
 import { api, ApiError } from "./api.js";
 import { t } from "./i18n/index.js";

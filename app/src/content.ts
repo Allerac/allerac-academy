@@ -5,12 +5,23 @@ import type { CourseBundle, Lesson } from "./types";
 
 export const DEFAULT_LANG = "pt";
 
-export function getCourse(lang: string | null): CourseBundle {
-  return (lang && courses[lang]) || courses[DEFAULT_LANG];
+/** Maps any ?lang= value to a language we have content for ("en-US" -> "en", unknown -> "pt"). */
+export function resolveLang(lang: string | null | undefined): string {
+  const base = (lang ?? "").trim().slice(0, 2).toLowerCase();
+  return courses[base] ? base : DEFAULT_LANG;
 }
 
+export function getCourse(lang: string | null): CourseBundle {
+  return courses[resolveLang(lang)];
+}
+
+/** A lesson in the requested language, falling back to Portuguese if it is not translated yet. */
 export function getLesson(lang: string | null, lessonId: string): Lesson | null {
-  return getCourse(lang).lessons[lessonId] ?? null;
+  return ownLesson(getCourse(lang), lessonId) ?? ownLesson(courses[DEFAULT_LANG], lessonId);
+}
+
+function ownLesson(course: CourseBundle, lessonId: string): Lesson | null {
+  return Object.hasOwn(course.lessons, lessonId) ? course.lessons[lessonId] : null;
 }
 
 /** Course map for the browser: no lesson bodies. */

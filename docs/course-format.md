@@ -83,7 +83,10 @@ All feedback becomes a list of passages to rewrite.
 
 ## Languages
 
-- Course content is written in **Portuguese first**, then translated to **English** and **Spanish** once each module is approved.
+- Course content is written in **Portuguese first**, then translated to **English** and **Spanish** once each module is approved. Modules 0, 1 and 2 exist in all three.
+- Translations keep the same folders, file names and Markdown structure as `content/pt/`. Only the text changes, including the section headings and the tutor-notes label (see `SECTION_LABELS` in `app/scripts/lib/parse-content.mjs`).
+- English is simple and international. Spanish is neutral, for Spain and Latin America (no strong regionalisms; "tú", "computadora", "teléfono").
+- Names of buttons and menus in external tools (GitHub, Codespaces, VS Code) stay as they appear in the tool's English interface. Links point to official docs in the same language when they exist (for example `docs.github.com/es`).
 - **Code, code comments, code documentation, and folder and file names are always in English**, in every language version.
 
 ## Writing on demand

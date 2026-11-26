@@ -9,7 +9,7 @@ Focus on a single beginner student.
 3. Module 1 in Portuguese.
 4. The learning app (`app/`) and the AI tutor (`tutor/`).
 5. Remaining modules, written on demand as the student progresses.
-6. English and Spanish translations of each approved module.
+6. English and Spanish translations of each approved module (modules 0, 1 and 2 done).
 
 ## Parked ideas (later)
 
