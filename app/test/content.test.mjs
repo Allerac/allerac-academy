@@ -7,10 +7,10 @@ import { buildCourse, extractTutorNotes, parseLesson } from "../scripts/lib/pars
 
 const contentRoot = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "content");
 
-test("pt course builds with modules 0 and 1 available", () => {
+test("pt course builds with modules 0, 1 and 2 available", () => {
   const course = buildCourse(contentRoot, "pt");
   const available = course.modules.filter((m) => m.available).map((m) => m.number);
-  assert.deepEqual(available, [0, 1]);
+  assert.deepEqual(available, [0, 1, 2]);
   assert.ok(course.modules.length >= 8, "course map lists all planned modules");
   for (const m of course.modules.filter((x) => x.available)) {
     for (const l of m.lessons) assert.ok(l.minutes > 0, `${l.id} has minutes from module.md`);
