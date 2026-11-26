@@ -2,10 +2,11 @@
 
 Um curso prático de "comece a trabalhar hoje" em desenvolvimento com IA. Você aprende fazendo, desde o primeiro dia, e termina contribuindo em projetos reais da Allerac.
 
-> Os módulos são escritos conforme o curso avança. Por enquanto, só os módulos 0 e 1 estão completos.
+> Os módulos são escritos conforme o curso avança. Por enquanto, os módulos 0, 1 e 2 estão completos.
 
 - [Módulo 0](00-first-day/module.md)
 - [Módulo 1](01-ai-beyond-chat/module.md)
+- [Módulo 2](02-where-code-lives/module.md)
 
 ## Módulo 0: Primeiro dia de trabalho
 
@@ -17,7 +18,9 @@ O que é um modelo de linguagem, prompt, contexto e agente. Por que a IA inventa
 
 ## Módulo 2: Configuração e onde o código vive
 
-Arquivos e pastas, o terminal sem medo, os comandos básicos e um editor de código (VS Code). Clonar um repositório, mudar algo com a ajuda da IA e ver o resultado rodando no próprio computador.
+Arquivos e pastas, o terminal sem medo, os comandos básicos e um editor de código no navegador (GitHub Codespaces, com VS Code no computador como opção). Abrir o seu repositório, mudar algo com a ajuda da IA e ver o resultado rodando.
+
+O caminho principal é no computador. No tablet ou no celular, as lições de terminal, editor e "ver rodando" têm um caminho alternativo, com os limites explicados (por exemplo, o editor github.dev não tem terminal).
 
 *Inclui segurança básica: não colar senhas e dados pessoais na IA e ativar a verificação em duas etapas no GitHub.*
 
