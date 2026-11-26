@@ -13,12 +13,12 @@ const courses = Object.fromEntries(LANGS.map((lang) => [lang, buildCourse(conten
 const ALL_NOTE_LABELS = Object.values(SECTION_LABELS).map((l) => l.tutorNotes);
 
 for (const lang of LANGS) {
-  test(`${lang}: course builds with modules 0, 1 and 2 available`, () => {
+  test(`${lang}: course builds with modules 0, 1, 2 and 3 available`, () => {
     const course = courses[lang];
     assert.ok(course, `content/${lang}/course.md exists`);
     assert.equal(course.lang, lang);
     const available = course.modules.filter((m) => m.available).map((m) => m.number);
-    assert.deepEqual(available, [0, 1, 2]);
+    assert.deepEqual(available, [0, 1, 2, 3]);
     assert.ok(course.modules.length >= 8, "course map lists all planned modules");
     for (const m of course.modules) {
       assert.ok(m.title, `${lang} module ${m.number} has a title`);
