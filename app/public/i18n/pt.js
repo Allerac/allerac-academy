@@ -1,5 +1,6 @@
-// UI strings in Portuguese. To add a language, copy this file to <lang>.js,
-// translate the values (keep the keys) and register it in i18n/index.js.
+// UI strings in Portuguese (Brazil). Every language file must have the same keys
+// (checked by test/i18n.test.mjs). To add a language, copy this file to <lang>.js,
+// translate the values and register it in i18n/index.js.
 export default {
   "app.name": "Allerac Academy",
   "app.brand": "Allerac",
@@ -7,6 +8,7 @@ export default {
   "app.loading": "Carregando…",
   "app.error": "Algo deu errado. Confira sua conexão e tente de novo.",
   "app.retry": "Tentar de novo",
+  "app.language": "Idioma",
 
   "map.weeklyGoal": "Meta da semana",
   "map.weeklyGoalProgress": "{done} de {goal} lições",
@@ -31,7 +33,6 @@ export default {
   "lesson.problemThanks": "Boa! Guarde sua ideia: você vai compará-la com o que vem agora.",
   "lesson.block": "Bloco {index} de {total}",
   "lesson.gotIt": "Entendi",
-  "lesson.didntGetIt": "Não entendi",
   "lesson.didntGetItThanks": "Anotado! Isso ajuda a melhorar este trecho. O tutor pode explicar de outro jeito.",
   "lesson.mission": "Missão",
   "lesson.missionHint": "Agora é com você, no mundo real. Volte aqui quando terminar.",

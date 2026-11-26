@@ -23,8 +23,8 @@ app/
     tutor/prompt.ts        Builds the tutor prompt (system prompt, lesson context, notes)
     tutor/allerac-one.ts   The only module that knows the Allerac One API shape
   public/                  Front end (map, lesson player, tutor panel)
-    i18n/                  UI strings per language (pt now; en/es later)
-  test/                    Parser tests (node:test) and a Playwright e2e smoke test
+    i18n/                  UI strings per language (pt, en, es; same keys in every file)
+  test/                    Parser and i18n tests (node:test), Playwright e2e tests (smoke + languages)
 ```
 
 ## Local development
@@ -48,7 +48,8 @@ Optional: copy `.dev.vars.example` to `.dev.vars` to try the tutor against a loc
 npm run typecheck             # builds content, then tsc
 npm test                      # content parser tests (tutor notes never leak, all lessons parse)
 npm run dev &                 # in another terminal
-npm run test:e2e              # map -> full lesson -> "didn't get it" -> feedback -> progress
+npm run test:e2e              # smoke (pt): map -> full lesson -> "learn more" -> feedback -> progress,
+                              # then languages: browser detection, PT/EN/ES switcher, saved choice, ?lang=, no tutor notes
 ```
 
 The e2e test uses `playwright-core` with a local Chrome (`CHROME_PATH`, default `/usr/bin/google-chrome`) at phone size and saves screenshots to `SCREENSHOT_DIR` (default `./screenshots`, git-ignored). Set `EXPECT_TUTOR=available` when the tutor is configured.
@@ -57,13 +58,13 @@ The e2e test uses `playwright-core` with a local Chrome (`CHROME_PATH`, default 
 
 Content lives in `content/<lang>/` at the repo root and is the single source of truth. At build time, `scripts/build-content.mjs`:
 
-1. reads `course.md` (course map, including modules not written yet, shown as "Em breve");
+1. reads `course.md` (course map, including modules not written yet, shown as "coming soon");
 2. reads every `NN-module/module.md` (title, goal, minutes per lesson from the lesson table);
 3. parses every lesson file into its fixed sections: Problem, Blocks (`### N. Title`), Mission and Go deeper;
-4. splits each block's `> **Notas para o tutor:** ...` blockquote out into a separate `tutorNotes` field;
+4. splits each block's tutor-notes blockquote (`> **Notas para o tutor:**`, `> **Tutor notes:**` or `> **Notas para el tutor:**`) out into a separate `tutorNotes` field;
 5. renders Markdown to HTML and writes `src/generated/content.ts` (git-ignored), which the Worker bundles.
 
-The build fails if a lesson is missing a required section. Section labels per language are defined in `SECTION_LABELS` in `scripts/lib/parse-content.mjs`; add a language there before adding `content/<lang>/`.
+The build fails if a lesson is missing a required section, or if a block still shows a tutor-notes label of any language (for example a pt label left in an en file). Section labels per language are defined in `SECTION_LABELS` in `scripts/lib/parse-content.mjs`; add a language there before adding `content/<lang>/`.
 
 **Tutor notes never reach the browser.** The lesson API (`src/content.ts`, `publicLesson`) sends only titles and rendered HTML. Tutor notes are used only server-side in the tutor prompt. Both the parser tests and the e2e test check this.
 
@@ -71,7 +72,7 @@ Content edits need no code changes: edit the Markdown, then redeploy.
 
 ## API
 
-All `/api/*` requests take `?lang=pt` (default `pt`). Student requests send `X-Student-Id` (anonymous UUID kept in `localStorage`).
+All `/api/*` requests take `?lang=pt|en|es` (unknown values fall back to `pt`; a lesson missing in a language falls back to its `pt` version). The front end picks the language from the saved choice (`localStorage` `academy.lang`), then the browser, then `pt`, and sends it on every call. The tutor answers in that language (`{{language}}` in the system prompt, plus a `language` field in the Allerac One request). Student requests send `X-Student-Id` (anonymous UUID kept in `localStorage`).
 
 | Method | Path | Purpose |
 | --- | --- | --- |
@@ -159,4 +160,4 @@ npx wrangler secret put BOT_API_KEY
 - **Allerac One contract.** Confirm endpoint, auth header and response field in `src/tutor/allerac-one.ts`.
 - **Tutor-led mission check.** Missions are self-reported ("Fiz a missão"); the tutor should verify them (for example by checking a GitHub link).
 - **Automatic tutor signals.** Data is stored (`tutor_requests`, `stuck_events`), but there is no review page yet.
-- **Translations.** Add `public/i18n/en.js` and `es.js` and a language switcher once `content/en` and `content/es` exist.
+- **Translations.** Keep `content/en` and `content/es` in sync when a pt lesson changes (the parser tests fail if lessons, blocks or tutor notes differ between languages).

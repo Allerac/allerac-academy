@@ -7,7 +7,7 @@ import type { Lesson } from "../types";
 const LANGUAGE_NAMES: Record<string, string> = {
   pt: "Brazilian Portuguese",
   en: "English",
-  es: "Spanish",
+  es: "neutral Spanish (easy to follow in Spain and Latin America)",
 };
 
 export type TutorKind = "explain" | "question";

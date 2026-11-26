@@ -39,6 +39,8 @@ export const SECTION_LABELS = {
   },
 };
 
+const ALL_TUTOR_NOTE_LABELS = Object.values(SECTION_LABELS).map((l) => l.tutorNotes);
+
 const marked = new Marked({ gfm: true });
 marked.use({
   renderer: {
@@ -145,8 +147,11 @@ export function parseLesson(md, lang, ids) {
   if (blockSections.length === 0) throw new Error(`${ids.id}: no "### " blocks`);
   const blocks = blockSections.map((b, i) => {
     const { visible, notes } = extractTutorNotes(b.body, labels.tutorNotes);
-    if (visible.includes(`**${labels.tutorNotes}`)) {
-      throw new Error(`${ids.id}: block ${i + 1} has tutor notes in an unexpected place`);
+    // Any language's tutor-notes label left in the visible text means a note would leak
+    // (misplaced, or written with another language's label after copying a file).
+    const leaked = ALL_TUTOR_NOTE_LABELS.find((label) => visible.includes(`**${label}`));
+    if (leaked) {
+      throw new Error(`${ids.id}: block ${i + 1} has "${leaked}" in an unexpected place (expected "${labels.tutorNotes}")`);
     }
     return {
       index: i,

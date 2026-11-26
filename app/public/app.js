@@ -3,7 +3,7 @@
 
 import { api } from "./api.js";
 import { el } from "./dom.js";
-import { detectLang, setLang, t } from "./i18n/index.js";
+import { detectLang, getLang, setLang, SUPPORTED_LANGS, t } from "./i18n/index.js";
 import { explain, mountTutor, openTutor, unmountTutor } from "./tutor.js";
 
 const WEEKLY_GOAL_LESSONS = 3;
@@ -135,12 +135,36 @@ function mapPage() {
         el("img", { src: "/icons/icon.svg", alt: "", width: 40, height: 40 }),
         el("span", { class: "brand-name" }, [el("strong", {}, t("app.brand")), " ", el("span", {}, t("app.product"))]),
       ]),
+      languageSwitcher(),
     ]),
     el("section", { class: "intro", html: course.introHtml }),
     goal,
     nextCard,
     el("ol", { class: "module-list" }, modules),
   ]);
+}
+
+/** PT / EN / ES switcher. The choice is saved and the course reloads in that language. */
+function languageSwitcher() {
+  const NAMES = { pt: "Português", en: "English", es: "Español" };
+  return el("div", { class: "lang-switch", role: "group", "aria-label": t("app.language") },
+    SUPPORTED_LANGS.map((lang) => {
+      const active = lang === getLang();
+      const btn = el("button", {
+        type: "button",
+        class: `lang-btn${active ? " active" : ""}`,
+        lang,
+        "aria-pressed": String(active),
+        title: NAMES[lang],
+      }, lang.toUpperCase());
+      btn.addEventListener("click", () => {
+        if (lang === getLang()) return;
+        setLang(lang, { persist: true });
+        start();
+      });
+      return btn;
+    }),
+  );
 }
 
 function moduleCard(m, next) {

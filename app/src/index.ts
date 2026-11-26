@@ -1,6 +1,6 @@
 // Allerac Academy Worker: JSON API under /api/*, static front end from public/.
 
-import { DEFAULT_LANG, getCourse, getLesson, publicCourse, publicLesson } from "./content";
+import { getCourse, getLesson, publicCourse, publicLesson, resolveLang } from "./content";
 import {
   countRecentTutorRequests,
   LESSON_DONE,
@@ -32,7 +32,7 @@ export default {
 } satisfies ExportedHandler<Env>;
 
 async function handleApi(request: Request, env: Env, ctx: ExecutionContext, url: URL): Promise<Response> {
-  const lang = url.searchParams.get("lang") ?? DEFAULT_LANG;
+  const lang = resolveLang(url.searchParams.get("lang"));
   const route = `${request.method} ${url.pathname}`;
 
   if (route === "GET /api/course") return json(publicCourse(getCourse(lang)));
@@ -124,6 +124,7 @@ async function handleTutor(request: Request, env: Env, ctx: ExecutionContext, la
       context: buildContext(input),
       history,
       message: buildStudentMessage(input),
+      language: lang,
       conversationId: `${studentId}:${lesson.id}`,
     });
     log(true);

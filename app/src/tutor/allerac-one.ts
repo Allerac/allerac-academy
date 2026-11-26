@@ -25,6 +25,8 @@ export interface AlleracOneChatRequest {
   context: string;
   history: TutorTurn[];
   message: string;
+  /** Student's course language ("pt", "en" or "es"). The system prompt already asks for it. */
+  language: string;
   /** Stable anonymous id so Allerac One can keep per-student memory, if supported. */
   conversationId: string;
 }
@@ -46,6 +48,7 @@ export async function askAlleracOne(env: Env, req: AlleracOneChatRequest): Promi
     system_prompt: req.systemPrompt,
     context: req.context,
     history: req.history.map((t) => ({ role: t.role === "student" ? "user" : "assistant", content: t.text })),
+    language: req.language,
     conversation_id: req.conversationId,
     source: "allerac-academy",
   };
