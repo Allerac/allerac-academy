@@ -30,7 +30,7 @@ AI does not look things up in an encyclopedia or think like a person. It generat
 
 ## Mission
 
-Ask Claude: "Explain how you generate an answer, as if I were 10 years old." Then tell the tutor, in your own words, one thing you did not know.
+Ask AI: "Explain how you generate an answer, as if I were 10 years old." Then tell the tutor, in your own words, one thing you did not know.
 
 **How the tutor checks:** the student explains, in their own words, that AI predicts the next piece of text.
 

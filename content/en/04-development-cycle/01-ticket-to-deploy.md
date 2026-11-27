@@ -44,18 +44,13 @@ The work is only finished when someone checks the change live: did it work? Did 
 
 ## Mission
 
-**On the GitHub website (on any device):**
+1. In your `my-academy-journal`, check that `main` contains the `index.html` from lesson 2.4. Use a public practice repository and make sure its files and history are suitable for publishing.
+   If you need a new public repository, set up a practice copy with only a simple `index.html` and no personal information, then use it for the next lessons.
+2. Under **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, and click **Save**.
+3. Watch the deployment under **Actions**. Return to **Settings → Pages**, open **Visit site**, and save the URL. This is your journal's production site. Anyone with the link can open it.
+4. Check that the current page loads. In the next missions, you'll open an issue, change the journal, and publish a new version at the same address.
 
-1. In [allerac-academy](https://github.com/Allerac/allerac-academy), open the **Pull requests** tab, click **Closed** and pick a PR with the purple **Merged** label.
-2. Read the title and the description: what changed and why? Is there a linked issue?
-3. Look at the commits and the **Files changed** tab.
-4. Open the repository's **Actions** tab and find the "Deploy" that ran right after that merge. A green icon means it worked.
-5. If the change is visible, find it on [academy.allerac.ai](https://academy.allerac.ai).
-6. Tell the tutor, in your own words, the path of that change: what the problem was, where it was made, who reviewed it, when it went in and how it went live.
-
-**On a tablet or phone:** everything works in the browser. GitHub Mobile helps you read the PR and the conversation. For the **Actions** tab, use the browser.
-
-**How the tutor checks:** the student sends the link to a merged PR and describes the steps with real details from that PR (the problem, the branch, the review, the merge and the deploy in the Actions tab). If the PR has no issue or review, the student notices and says so.
+You can do this in a browser on a computer, tablet, or phone. If the deployment fails, open the run under **Actions** and read the first failed step.
 
 ## Go deeper
 

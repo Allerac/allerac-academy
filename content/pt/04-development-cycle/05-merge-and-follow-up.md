@@ -17,9 +17,9 @@ Se a descrição do PR tem `Closes #` com o número da issue, o merge fecha a is
 > **Notas para o tutor:** se a issue não fechou, provavelmente a palavra-chave estava escrita errado ou o PR não foi para a `main`. O aluno pode fechar a issue à mão e citar o PR num comentário.
 
 ### 3. Conferir depois do merge
-"Funcionou na minha branch" não é o mesmo que "funciona na `main`". Depois do merge, confira a versão que as pessoas vão usar. Num time com deploy automático, espere o deploy terminar (na aba **Actions**), abra o site no ar e passe de novo pelos critérios de **Pronto quando**. No seu repositório pessoal, volte para a `main`, atualize e rode a página.
+Depois do merge, espere o deploy do GitHub Pages terminar em **Actions**. Abra a URL pública do seu diário e repita os critérios de **Pronto quando**.
 
-> **Notas para o tutor:** no allerac-academy, isso quer dizer esperar o "Deploy" ficar verde na aba Actions e abrir o academy.allerac.ai. Publicar a página pessoal na internet fica para o módulo 6.
+> **Notas para o tutor:** Peça ao aluno os links do PR, do deploy e da página publicada. Compare o que o teste cobre com o que ele conferiu no navegador.
 
 ### 4. Se algo deu errado
 Acontece, até com gente experiente. Mantenha a calma e escolha um caminho:
@@ -36,26 +36,18 @@ Um comentário curto na issue ou no PR avisa a todo mundo: "Entrou e está no ar
 > **Notas para o tutor:** o tom é o das lições 3.3 e 3.6: específico e breve. Não precisa marcar ninguém num repositório pessoal.
 
 ### 6. Pelo tablet ou celular
-Fazer o merge, apagar a branch, ver se a issue fechou e comentar funcionam no site do GitHub pelo navegador. O GitHub Mobile ajuda a acompanhar os avisos e responder aos comentários. Sem terminal, você não roda a página da `main` no celular: abra o `index.html` da `main` no github.com e use um artefato do Claude como prévia, ou confira depois numa tela maior.
+No navegador do celular, você pode fazer o merge, acompanhar o deploy, abrir o site publicado e comentar na issue.
 
-> **Notas para o tutor:** aceite a conferência pela prévia no caminho móvel, desde que o aluno diga como conferiu. Não prometa que o app faz tudo que o site faz.
+> **Notas para o tutor:** Peça ao aluno os links do PR, do deploy e da página publicada. Compare o que o teste cobre com o que ele conferiu no navegador.
 
 ## Missão
 
-**No computador (caminho principal):**
+1. No PR da lição 4.4, confira **Files changed**, a revisão se houver e o resultado verde em **Checks**. Faça o merge na `main` e confirme que a issue foi fechada.
+2. Em **Actions**, abra a execução de publicação do Pages disparada pelo merge. Se falhar, leia o passo com erro e registre o que falta corrigir.
+3. Quando a publicação terminar, abra a mesma URL da lição 4.1. Confira que a nova seção aparece, que lista um módulo concluído e que o conteúdo antigo continua visível. Abra também no celular ou estreite a janela.
+4. Comente na issue com os links do PR, da execução do deploy e da página pública. Diga o que você conferiu no site.
 
-1. No PR da lição 4.4, faça uma última revisão na aba **Files changed**.
-2. Faça o merge e apague a branch.
-3. Confira que a issue fechou sozinha e que a lista de passos está toda marcada.
-4. No codespace, volte para a `main`, atualize, rode a página e confira de novo cada critério de **Pronto quando**.
-5. Deixe um comentário curto na issue dizendo o que você conferiu depois do merge.
-6. Mande ao tutor o link da issue.
-
-**Extra (opcional):** se o seu PR da lição 3.6 no allerac-academy já entrou, abra a aba **Actions** do repositório, encontre o "Deploy" que rodou depois do merge e procure a sua mudança no [academy.allerac.ai](https://academy.allerac.ai).
-
-**Pelo tablet ou celular:** faça o merge e apague a branch pelo navegador, confira a issue e use um artefato do Claude com o `index.html` da `main` como prévia. No comentário, diga como conferiu.
-
-**Como o tutor confere:** o PR está com merge, a issue fechou ligada a ele, a branch foi apagada, e há um comentário na issue dizendo o que foi conferido depois do merge (e como, no caminho móvel).
+**Pelo tablet ou celular:** faça os mesmos passos no navegador e abra a página publicada no próprio aparelho.
 
 ## Para ir mais fundo
 

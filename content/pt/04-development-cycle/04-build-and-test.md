@@ -36,24 +36,19 @@ Faça um commit por passo e marque o passo na issue. Quando terminar, abra o PR 
 > **Notas para o tutor:** ligue com a lição 3.6. A palavra-chave só funciona quando o PR vai para a branch padrão (`main`). Se o PR resolver só parte da tarefa, o aluno pode citar a issue sem a palavra-chave (por exemplo, "Part of #12"), e ela não fecha.
 
 ### 6. Pelo tablet ou celular
-Dá para criar a branch e editar o arquivo pelo github.com, fazendo um commit por passo nessa branch. O que não dá é rodar a página: o github.dev e o editor do site não têm terminal. Para uma prévia, peça ao Claude para mostrar a página (um artefato) com o HTML final, ou confira depois numa tela maior. Escreva no PR o que não foi possível testar.
+No navegador, os commits são gravados diretamente na branch remota. Abra o PR e acompanhe o teste em **Checks**. Depois do merge, você poderá conferir a página publicada no celular.
 
-> **Notas para o tutor:** mesmos limites da lição 2.4. Aceite a prévia da IA no caminho móvel, mas cobre que o aluno diga no PR como conferiu e o que ficou sem testar. Confirme que a branch certa está selecionada antes de cada commit.
+> **Notas para o tutor:** Peça ao aluno os links do PR, do deploy e da página publicada. Compare o que o teste cobre com o que ele conferiu no navegador.
 
 ## Missão
 
-**No computador (caminho principal):**
+1. No Codespaces, atualize a `main` e crie uma branch para a issue. Copie o [workflow de teste](/exercises/journal-check.yml) para `.github/workflows/journal-check.yml`. Faça commit só do workflow, publique com **Publish Branch** (ou `git push -u origin HEAD`) e abra um PR para a `main`. Inclua `Closes #N`, trocando `N` pelo número da issue.
+2. No PR, abra **Checks** e leia o erro de **Check journal**. O teste busca uma seção com o ID `completed-modules` no HTML. O primeiro resultado deve ficar vermelho porque a seção ainda falta.
+3. Na mesma branch, adicione `<section id="completed-modules">` com um título e pelo menos um módulo concluído. Rode a página, confira o conteúdo anterior e teste numa janela estreita. Faça um segundo commit e envie com **Push** (ou `git push`). Veja o mesmo PR receber o commit e o teste passar.
+4. Na descrição do PR, anote o que você conferiu manualmente. O teste automático verifica a presença da seção. A lista de módulos e a leitura no celular precisam da sua conferência.
+5. Abra a URL publicada e confirme que a seção ainda não está lá. Peça uma revisão se tiver alguém disponível e deixe o PR aberto para a próxima lição.
 
-1. No codespace do `my-academy-journal`, atualize a `main` e crie uma branch para a issue das lições anteriores.
-2. Para cada passo da lista: peça à IA só aquele passo, leia a diferença, aplique, rode a página e confira. Faça um commit por passo e marque o passo na issue.
-3. No fim, confira cada critério de **Pronto quando** e veja a página numa janela estreita.
-4. Publique a branch e abra um PR para a `main`, com o que, por que, **como conferir** (o que você testou) e `Closes #` com o número da issue.
-5. Ainda não faça o merge: isso fica para a próxima lição.
-6. Mande ao tutor o link do PR.
-
-**Pelo tablet ou celular:** crie a branch pelo menu de branches do github.com, edite o `index.html` nessa branch com a ajuda da IA, um commit por passo. Use um artefato do Claude como prévia. Abra o PR pelo navegador e diga na descrição o que não deu para testar.
-
-**Como o tutor confere:** existe uma branch com commits de mensagens claras (de preferência um por passo), os passos estão marcados na issue, e há um PR aberto para a `main` com `Closes #`, e uma parte **Como conferir** que diz o que foi testado de verdade.
+**Pelo tablet ou celular:** crie a branch e os dois commits no editor do github.com. Cada commit feito ali já fica na branch remota. Confira o teste na aba **Checks** e faça a conferência visual depois do deploy.
 
 ## Para ir mais fundo
 

@@ -44,18 +44,13 @@ O trabalho só termina quando alguém confere a mudança no ar: funcionou? Quebr
 
 ## Missão
 
-**Pelo site do GitHub (em qualquer dispositivo):**
+1. No seu `my-academy-journal`, confirme que a `main` tem o `index.html` da lição 2.4. Use um repositório público de exercício e confira se os arquivos e o histórico podem ser publicados antes de habilitar o Pages.
+   Se você precisar de um repositório público novo, crie uma cópia de exercício com apenas um `index.html` simples, sem dados pessoais, e use essa cópia nas próximas lições.
+2. Em **Settings → Pages**, escolha **Deploy from a branch**, selecione `main` e `/ (root)`, e clique em **Save**.
+3. Na aba **Actions**, acompanhe a publicação. Volte a **Settings → Pages**, abra **Visit site** e guarde a URL. Essa é a produção do seu diário: qualquer pessoa com o link pode abrir.
+4. Confira que a página atual carrega. Nas próximas missões, você vai abrir uma issue, mudar o diário e publicar uma nova versão nesse mesmo endereço.
 
-1. No [allerac-academy](https://github.com/Allerac/allerac-academy), abra a aba **Pull requests**, clique em **Closed** e escolha um PR com a etiqueta roxa **Merged**.
-2. Leia o título e a descrição: o que mudou e por quê? Existe uma issue ligada?
-3. Olhe os commits e a aba **Files changed**.
-4. Abra a aba **Actions** do repositório e encontre o "Deploy" que rodou logo depois desse merge. Um ícone verde quer dizer que deu certo.
-5. Se a mudança for visível, encontre-a no [academy.allerac.ai](https://academy.allerac.ai).
-6. Conte ao tutor, com as suas palavras, o caminho dessa mudança: qual era o problema, onde ela foi feita, quem revisou, quando entrou e como chegou ao ar.
-
-**Pelo tablet ou celular:** tudo funciona no navegador. O GitHub Mobile ajuda a ler o PR e a conversa. Para a aba **Actions**, use o navegador.
-
-**Como o tutor confere:** o aluno manda o link de um PR com merge e descreve as etapas com detalhes reais desse PR (o problema, a branch, a revisão, o merge e o deploy na aba Actions). Se o PR não tiver issue ou revisão, ele percebe e diz isso.
+O caminho funciona no navegador do computador, tablet ou celular. Se a publicação falhar, abra a execução em **Actions** e leia o primeiro passo com erro.
 
 ## Para ir mais fundo
 

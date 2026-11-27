@@ -17,9 +17,9 @@ If the PR description has `Closes #` with the issue number, the merge closes the
 > **Tutor notes:** if the issue didn't close, the keyword was probably misspelled or the PR didn't target `main`. The student can close the issue by hand and mention the PR in a comment.
 
 ### 3. Check after the merge
-"It worked on my branch" is not the same as "it works on `main`". After the merge, check the version people will use. On a team with automatic deploys, wait for the deploy to finish (in the **Actions** tab), open the live site and go through the **Done when** criteria again. In your personal repository, go back to `main`, update it and run the page.
+After merging, wait for the GitHub Pages deployment under **Actions**. Open your journal's public URL and go through the **Done when** criteria again.
 
-> **Tutor notes:** in allerac-academy, this means waiting for "Deploy" to turn green in the Actions tab and opening academy.allerac.ai. Publishing the personal page on the internet is for module 6.
+> **Tutor notes:** Ask for links to the PR, the deployment, and the published page. Compare what the test covers with what the student verified in the browser.
 
 ### 4. If something went wrong
 It happens, even to experienced people. Stay calm and pick a path:
@@ -36,26 +36,18 @@ A short comment on the issue or the PR lets everyone know: "It's in and live. I 
 > **Tutor notes:** the tone is the one from lessons 3.3 and 3.6: specific and brief. No need to tag anyone in a personal repository.
 
 ### 6. On a tablet or phone
-Merging, deleting the branch, checking that the issue closed and commenting all work on the GitHub website in the browser. GitHub Mobile helps you follow notifications and reply to comments. Without a terminal, you can't run the `main` page on a phone: open `index.html` on `main` on github.com and use a Claude artifact as a preview, or check later on a bigger screen.
+In your phone browser, you can merge the PR, follow the deployment, open the published site, and comment on the issue.
 
-> **Tutor notes:** accept checking via the preview on the mobile path, as long as the student says how they checked. Don't promise the app does everything the website does.
+> **Tutor notes:** Ask for links to the PR, the deployment, and the published page. Compare what the test covers with what the student verified in the browser.
 
 ## Mission
 
-**On a computer (main path):**
+1. In the PR from lesson 4.4, review **Files changed**, any review you received, and the green result under **Checks**. Merge into `main` and confirm that the issue closed.
+2. Under **Actions**, open the Pages deployment triggered by the merge. If it fails, read the failed step and record what needs fixing.
+3. When the deployment finishes, open the same URL from lesson 4.1. Check that the new section appears, lists a completed module, and leaves the existing content visible. Open it on a phone or narrow the window as well.
+4. Comment on the issue with links to the PR, the deployment run, and the public page. State what you checked on the live site.
 
-1. On the PR from lesson 4.4, do one last review in the **Files changed** tab.
-2. Merge it and delete the branch.
-3. Check that the issue closed by itself and that the list of steps is fully ticked.
-4. In the codespace, go back to `main`, update it, run the page and check each **Done when** criterion again.
-5. Leave a short comment on the issue saying what you checked after the merge.
-6. Send the tutor the issue link.
-
-**Extra (optional):** if your PR from lesson 3.6 in allerac-academy has already been merged, open the repository's **Actions** tab, find the "Deploy" that ran after the merge and look for your change on [academy.allerac.ai](https://academy.allerac.ai).
-
-**On a tablet or phone:** merge and delete the branch in the browser, check the issue and use a Claude artifact with `index.html` from `main` as a preview. In the comment, say how you checked.
-
-**How the tutor checks:** the PR is merged, the issue closed linked to it, the branch was deleted, and there is a comment on the issue saying what was checked after the merge (and how, on the mobile path).
+**On a tablet or phone:** follow the same steps in a browser and open the published page on your device.
 
 ## Go deeper
 

@@ -7,9 +7,9 @@ You improved your page with AI's help, but on GitHub the file is still the old o
 ## Blocks
 
 ### 1. Ask for a change and check the file
-Open the `my-academy-journal` codespace again (or create one, if you do not have it). Ask the AI (Claude in another tab, or the editor's chat, if it shows up) for a concrete improvement to `index.html`: a color, a piece of text, a new section. Paste the suggestion into the file, or let the AI apply it, and **read the difference** before moving on. You are the one who signs off on the change.
+Open the `my-academy-journal` codespace again (or create one, if you do not have it). Ask the AI (your chosen chat tool, or the editor's chat, if it shows up) for a concrete improvement to `index.html`: a color, a piece of text, a new section. Paste the suggestion into the file, or let the AI apply it, and **read the difference** before moving on. You are the one who signs off on the change.
 
-> **Tutor notes:** connect it to lessons 1.2 and 1.5: check and iterate. Do not require Claude Code or Copilot. A chat in a tab next to it is enough. One small improvement is enough.
+> **Tutor notes:** connect it to lessons 1.2 and 1.5: check and iterate. A chat in a tab next to it is enough. One small improvement is enough.
 
 ### 2. See the page running
 In the Codespaces terminal, in the project folder, run:
@@ -38,9 +38,9 @@ On a tablet, if Codespaces is usable (best with a keyboard), follow the main pat
 
 On a phone, the realistic path is different. Edit `index.html` on github.com (the edit file button) or on github.dev (change `github.com` to `github.dev` in the URL), ask the AI for the improvement, paste it and check it, and commit from there. github.dev **has no terminal**, so you cannot run `python3 -m http.server` or see the local server.
 
-To get an idea of the result on a phone, ask Claude to show the page (an artifact) with the final HTML, or open the file later on a computer or tablet. It is a preview, not the same as seeing the file actually being served. [GitHub Mobile](https://docs.github.com/en/get-started/using-github/github-mobile) helps you check the commit afterwards, not run the page.
+To get an idea of the result on a phone, see whether your AI tool can show a preview using the final HTML, or open the file later on a computer or tablet. It is a preview, not the same as seeing the file actually being served. [GitHub Mobile](https://docs.github.com/en/get-started/using-github/github-mobile) helps you check the commit afterwards, not run the page.
 
-> **Tutor notes:** do not suggest third-party preview services. Be explicit: no terminal, no local server. Accept the Claude artifact or a visual check of the HTML as the preview, and the commit on GitHub as the required part. On a tablet with Codespaces, ask for the real preview.
+> **Tutor notes:** do not suggest third-party preview services. Be explicit: no terminal, no local server. Accept an AI preview or a visual check of the HTML, and the commit on GitHub as the required part. On a tablet with Codespaces, ask for the real preview.
 
 ## Mission
 
@@ -53,10 +53,12 @@ To get an idea of the result on a phone, ask Claude to show the page (an artifac
 5. Stop the codespace.
 6. Send the tutor the link to the file on GitHub and say what changed and what you saw in the browser.
 
+**Optional on a computer with [Cursor](https://cursor.com/docs/agent/overview):** if you already have Git and Cursor installed, copy your repository's HTTPS address from GitHub's **Code** button and run `git clone <URL>` with that address. Open the folder in Cursor and ask Agent for a small change to `index.html`. Review the diff, run the page from the terminal as in the main path, then commit.
+
 **On a tablet or phone:**
 
 - **On a tablet:** if Codespaces works, follow the main path.
-- **On a phone:** edit `index.html` on github.com or github.dev, with the AI's help, and commit. For the preview, use a Claude artifact with the final HTML (or check it later on a bigger screen). Tell the tutor the link to the file, what changed, how you checked it, and that it was not possible to run the server on the phone.
+- **On a phone:** edit `index.html` on github.com or github.dev, with the AI's help, and commit. Use your AI tool's preview if available, or check the page later on a bigger screen. Tell the tutor the link to the file, what changed, how you checked it, and that it was not possible to run the server on the phone.
 
 **How the tutor checks:** `index.html` in the repository has a new commit with a clear message, and the student describes the change. On the main path, they also saw the page served in the browser. On the mobile path, they explain how they checked it (AI preview or bigger screen) and the terminal limit.
 

@@ -30,7 +30,7 @@ A IA não consulta uma enciclopédia nem pensa como uma pessoa. Ela gera o que p
 
 ## Missão
 
-Peça ao Claude: "Explique como você gera uma resposta, como se eu tivesse 10 anos." Depois, conte ao tutor, com suas palavras, uma coisa que você não sabia.
+Peça à IA: "Explique como você gera uma resposta, como se eu tivesse 10 anos." Depois, conte ao tutor, com suas palavras, uma coisa que você não sabia.
 
 **Como o tutor confere:** o aluno explica, com palavras próprias, que a IA prevê o próximo pedaço do texto.
 

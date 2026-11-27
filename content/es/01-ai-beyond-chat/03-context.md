@@ -31,7 +31,7 @@ Cada conversación empieza con la mesa vacía. Si necesitas algo de una conversa
 
 ## Misión
 
-1. Abre una conversación nueva en Claude y pide un texto corto sobre un tema que te guste.
+1. Abre una conversación nueva en el chat de IA que elegiste y pide un texto corto sobre un tema que te guste.
 2. Abre otra conversación y pregunta: "¿Sobre qué era el texto que escribiste?"
 3. Cuéntale al tutor qué pasó y por qué.
 

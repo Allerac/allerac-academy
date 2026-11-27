@@ -36,24 +36,19 @@ Make one commit per step and tick the step in the issue. When you finish, open t
 > **Tutor notes:** link with lesson 3.6. The keyword only works when the PR targets the default branch (`main`). If the PR solves only part of the task, the student can mention the issue without the keyword (for example, "Part of #12"), and it won't close.
 
 ### 6. On a tablet or phone
-You can create the branch and edit the file on github.com, making one commit per step on that branch. What you can't do is run the page: github.dev and the website editor have no terminal. For a preview, ask Claude to show the page (an artifact) with the final HTML, or check it later on a bigger screen. Write in the PR what you couldn't test.
+In the browser, commits go straight to the remote branch. Open the PR and follow the test under **Checks**. After merging, you can verify the published page on your phone.
 
-> **Tutor notes:** same limits as lesson 2.4. Accept the AI preview on the mobile path, but make sure the student says in the PR how they checked and what was left untested. Confirm the right branch is selected before each commit.
+> **Tutor notes:** Ask for links to the PR, the deployment, and the published page. Compare what the test covers with what the student verified in the browser.
 
 ## Mission
 
-**On a computer (main path):**
+1. In Codespaces, update `main` and create a branch for the issue. Copy the [test workflow](/exercises/journal-check.yml) to `.github/workflows/journal-check.yml`. Commit the workflow by itself, use **Publish Branch** (or `git push -u origin HEAD`), and open a PR into `main`. Add `Closes #N`, replacing `N` with your issue number.
+2. In the PR, open **Checks** and read the **Check journal** error. The test looks for a section with the ID `completed-modules` in the HTML. The first run should fail because the section is missing.
+3. On the same branch, add `<section id="completed-modules">` with a heading and at least one completed module. Run the page, check the existing content, and try a narrow window. Make a second commit and use **Push** (or `git push`). Watch the same PR receive the commit and the test pass.
+4. In the PR description, record what you checked manually. The automated test checks for the section. Check the module list and mobile readability yourself.
+5. Open the public URL and confirm the section is still absent. Ask for a review if someone is available and leave the PR open for the next lesson.
 
-1. In the `my-academy-journal` codespace, update `main` and create a branch for the issue from the previous lessons.
-2. For each step on the list: ask AI for only that step, read the diff, apply it, run the page and check. Make one commit per step and tick the step in the issue.
-3. At the end, check each **Done when** criterion and look at the page in a narrow window.
-4. Publish the branch and open a PR into `main`, with what, why, **how to check** (what you tested) and `Closes #` with the issue number.
-5. Don't merge yet: that is for the next lesson.
-6. Send the tutor the PR link.
-
-**On a tablet or phone:** create the branch from the github.com branch menu, edit `index.html` on that branch with AI's help, one commit per step. Use a Claude artifact as a preview. Open the PR in the browser and say in the description what you couldn't test.
-
-**How the tutor checks:** there is a branch with clearly worded commits (ideally one per step), the steps are ticked in the issue, and there is an open PR into `main` with `Closes #` and a **How to check** part that says what was really tested.
+**On a tablet or phone:** create the branch and make both commits in the github.com editor. Commits made there are already on the remote branch. Check the result under **Checks** and verify the layout after deployment.
 
 ## Go deeper
 

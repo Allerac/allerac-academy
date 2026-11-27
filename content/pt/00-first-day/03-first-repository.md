@@ -26,12 +26,12 @@ Uma boa mensagem de commit é curta e diz o que você fez: "Add introduction to 
 ### 4. Por que em inglês
 No mundo do software, código e documentação de código são escritos em inglês, para qualquer pessoa do mundo entender. Você não precisa ser fluente: a IA ajuda.
 
-> **Notas para o tutor:** tranquilize o aluno. Incentive usar o Claude para revisar o inglês.
+> **Notas para o tutor:** tranquilize o aluno. Incentive usar a IA para revisar o inglês.
 
 ## Missão
 
 1. Crie um repositório chamado `my-academy-journal`, marcando a opção de adicionar um README.
-2. Edite o README pelo navegador e escreva 3 linhas em inglês sobre você e por que está fazendo o curso (pode pedir ajuda ao Claude).
+2. Edite o README pelo navegador e escreva 3 linhas em inglês sobre você e por que está fazendo o curso (pode pedir ajuda à IA).
 3. Salve com um commit de mensagem clara, por exemplo `Add introduction to README`.
 4. Mande para o tutor o link do repositório.
 

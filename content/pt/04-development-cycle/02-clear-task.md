@@ -49,17 +49,9 @@ Antes de publicar o ticket, cole o texto numa conversa com a IA e pergunte: "O q
 
 ## Missão
 
-**Pelo site do GitHub (em qualquer dispositivo):**
-
-1. Escolha uma melhoria pequena para a página do seu `my-academy-journal`. Se não tiver ideia, use esta: uma seção com os módulos do curso que você já concluiu.
-2. No repositório, abra a aba **Issues** e clique em **New issue**.
-3. Escreva um título com o resultado, uma ou duas frases de contexto e uma seção **Pronto quando** com dois a quatro critérios em lista.
-4. Peça à IA para apontar o que está ambíguo e ajuste o que fizer sentido.
-5. Crie a issue e mande ao tutor o link.
-
-**Pelo tablet ou celular:** o caminho acima funciona no navegador. Depois, o GitHub Mobile serve para acompanhar e comentar a issue.
-
-**Como o tutor confere:** a issue existe no `my-academy-journal`, o título descreve o resultado, há contexto e uma lista de dois a quatro critérios que dá para conferir com "sim" ou "não".
+1. Abra uma issue no `my-academy-journal` com o título `Add a completed modules section` e explique por que a seção ajuda quem lê o diário.
+2. Em **Pronto quando**, registre três critérios: o `index.html` tem uma seção `<section id="completed-modules">`, ela lista pelo menos um módulo concluído, e a seção aparece na URL pública sem tirar o conteúdo anterior.
+3. Peça à IA para apontar ambiguidades, publique a issue e guarde o número para o PR.
 
 ## Para ir mais fundo
 

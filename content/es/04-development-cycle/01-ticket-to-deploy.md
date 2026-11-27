@@ -44,18 +44,13 @@ El trabajo solo termina cuando alguien comprueba el cambio en línea: ¿funcion�
 
 ## Misión
 
-**Desde el sitio de GitHub (en cualquier dispositivo):**
+1. En tu `my-academy-journal`, comprueba que `main` tiene el `index.html` de la lección 2.4. Usa un repositorio público de práctica y comprueba que sus archivos y su historial se pueden publicar.
+   Si necesitas un repositorio público nuevo, crea una copia de práctica con un `index.html` sencillo y sin datos personales, y úsala en las siguientes lecciones.
+2. En **Settings → Pages**, elige **Deploy from a branch**, selecciona `main` y `/ (root)`, y haz clic en **Save**.
+3. Sigue el despliegue en **Actions**. Vuelve a **Settings → Pages**, abre **Visit site** y guarda la URL. Ese es el sitio de producción de tu diario. Cualquiera con el enlace puede abrirlo.
+4. Comprueba que la página actual carga. En las siguientes misiones vas a crear una issue, cambiar el diario y publicar una nueva versión en la misma dirección.
 
-1. En [allerac-academy](https://github.com/Allerac/allerac-academy), abre la pestaña **Pull requests**, haz clic en **Closed** y elige un PR con la etiqueta morada **Merged**.
-2. Lee el título y la descripción: ¿qué cambió y por qué? ¿Hay una issue vinculada?
-3. Mira los commits y la pestaña **Files changed**.
-4. Abre la pestaña **Actions** del repositorio y encuentra el "Deploy" que se ejecutó justo después de ese merge. Un icono verde significa que salió bien.
-5. Si el cambio es visible, encuéntralo en [academy.allerac.ai](https://academy.allerac.ai).
-6. Cuéntale al tutor, con tus palabras, el camino de ese cambio: cuál era el problema, dónde se hizo, quién lo revisó, cuándo entró y cómo llegó a estar en línea.
-
-**Desde la tableta o el teléfono:** todo funciona en el navegador. GitHub Mobile ayuda a leer el PR y la conversación. Para la pestaña **Actions**, usa el navegador.
-
-**Cómo lo revisa el tutor:** el estudiante envía el enlace de un PR con merge y describe las etapas con detalles reales de ese PR (el problema, la rama, la revisión, el merge y el despliegue en la pestaña Actions). Si el PR no tiene issue o revisión, se da cuenta y lo dice.
+Puedes hacerlo desde el navegador de una computadora, tableta o teléfono. Si el despliegue falla, abre la ejecución en **Actions** y lee el primer paso con error.
 
 ## Para profundizar
 

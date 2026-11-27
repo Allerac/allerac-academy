@@ -32,14 +32,16 @@ AI can make mistakes or make things up. Read and check before you use it. You ar
 
 ## Mission
 
-1. Create your account on [Claude](https://claude.ai).
-2. Solve the problem from the start of this lesson with Claude's help.
+1. Open [ChatGPT](https://chatgpt.com/) or [Claude](https://claude.ai/). If you already use one, stick with it.
+2. Solve the problem from the start of the lesson with the AI you chose.
 3. Ask for a shorter version.
 4. Ask for a more formal version.
 5. Paste the version you would send into the tutor chat and say why.
+
+If the Academy tutor is available, you can also use it for questions about the lesson. It connects to Allerac One.
 
 **How the tutor checks:** the final reply is polite, clear and in English, and the student can explain why they chose that version.
 
 ## Go deeper
 
-*To be decided: an official introductory video on how to use Claude (link, language, subtitles and date checked).*
+[Getting started with ChatGPT](https://openai.com/academy/getting-started/).

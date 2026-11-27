@@ -7,7 +7,7 @@ Quieres una página en internet para presentarte, pero no sabes programar. ¿Cu�
 ## Bloques
 
 ### 1. Qué es un artefacto
-Un artefacto es algo concreto que la IA crea para ti: una página web, un documento, un diagrama, una pequeña app. En el chat de Claude aparece al lado de la conversación, y puedes ver el resultado al instante.
+Un artefacto es algo concreto que la IA crea para ti: una página web, un documento o un diagrama. Si tu herramienta ofrece una vista previa, como Claude con Artifacts, puedes comprobar ahí el resultado.
 
 > **Notas para el tutor:** muestra que un artefacto no es solo código: es cualquier cosa que se usa o se publica.
 
@@ -24,13 +24,15 @@ La primera versión casi nunca es la final. Pide ajustes: colores, textos, una s
 ### 4. Guardarlo con historial
 El archivo que creó la IA va a tu repositorio, con un commit. Así guardas cada versión de tu página.
 
-> **Notas para el tutor:** en el módulo 6, esta página se publica en un servidor. Puedes mencionarlo como "spoiler".
+> **Notas para el tutor:** en el módulo 4, esta página se publica en un servidor. Puedes mencionarlo como "spoiler".
 
 ## Misión
 
-1. Pídele a Claude: "Crea una página web sencilla, en un solo archivo HTML, para presentarme." Dile tu nombre, lo que te gusta y por qué estás aprendiendo tecnología.
+1. Pídele a la IA: "Crea una página web sencilla, en un solo archivo HTML, para presentarme." Dile tu nombre, lo que te gusta y por qué estás aprendiendo tecnología.
 2. Pide al menos 2 ajustes.
-3. Descarga el archivo y súbelo a tu repositorio `my-academy-journal` con el nombre `index.html` (botón "Add file" y luego "Upload files" en GitHub).
+3. Guarda el resultado como `index.html`. Si la IA solo te muestra el código, elige **Add file → Create new file** en GitHub, ponle el nombre `index.html` y pega el HTML. Si descargaste el archivo, usa **Add file → Upload files**.
+
+   Abre el archivo guardado en un navegador o comprueba la vista previa si está disponible. En el teléfono, si no puedes abrir la página, revisa el HTML y prueba la página cuando tengas acceso a una computadora.
 4. Haz el commit con un mensaje claro, por ejemplo `Add personal web page`.
 5. Envía al tutor el enlace del archivo en GitHub.
 

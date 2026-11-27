@@ -16,7 +16,7 @@ Use AI to solve something real, get a GitHub account and a first repository, mak
 
 ## Module 1: AI beyond chat
 
-What a language model, a prompt, context and an agent are. Why AI makes things up and how to check what it gives you. The difference between a chat (like Claude) and an agent that works on files (like Claude Code and Codex).
+What a language model, a prompt, context and an agent are. Why AI makes things up and how to check what it gives you. The difference between a chat (like ChatGPT or Claude) and an agent that works on files (like Claude Code and Codex).
 
 ## Module 2: Setup and where code lives
 
