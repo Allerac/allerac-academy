@@ -2,12 +2,13 @@
 
 Un curso práctico de "empieza a trabajar hoy" en desarrollo con IA. Aprendes haciendo, desde el primer día, y terminas contribuyendo en proyectos reales de Allerac.
 
-> Los módulos se escriben a medida que avanza el curso. Por ahora, los módulos 0, 1, 2 y 3 están completos.
+> Los módulos se escriben a medida que avanza el curso. Por ahora, los módulos 0, 1, 2, 3 y 4 están completos.
 
 - [Módulo 0](00-first-day/module.md)
 - [Módulo 1](01-ai-beyond-chat/module.md)
 - [Módulo 2](02-where-code-lives/module.md)
 - [Módulo 3](03-collaboration/module.md)
+- [Módulo 4](04-development-cycle/module.md)
 
 ## Módulo 0: Primer día de trabajo
 

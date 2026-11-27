@@ -2,12 +2,13 @@
 
 A hands-on, "start working today" course on AI-assisted development. You learn by doing, from day one, and finish contributing to real Allerac projects.
 
-> Modules are written as the course moves forward. For now, modules 0, 1, 2 and 3 are complete.
+> Modules are written as the course moves forward. For now, modules 0, 1, 2, 3 and 4 are complete.
 
 - [Module 0](00-first-day/module.md)
 - [Module 1](01-ai-beyond-chat/module.md)
 - [Module 2](02-where-code-lives/module.md)
 - [Module 3](03-collaboration/module.md)
+- [Module 4](04-development-cycle/module.md)
 
 ## Module 0: First day at work
 
