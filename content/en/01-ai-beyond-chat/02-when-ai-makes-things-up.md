@@ -31,7 +31,7 @@ AI is a fast coworker, but you are the one who delivers the work. Being good wit
 
 ## Mission
 
-1. Ask Claude for 3 fun facts about your city, with sources.
+1. Ask AI for 3 fun facts about your city, with sources.
 2. Check at least one of them online.
 3. Tell the tutor: was it right? Did the source exist?
 

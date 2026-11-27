@@ -32,14 +32,16 @@ La IA puede equivocarse o inventar cosas. Antes de usar lo que te da, léelo y r
 
 ## Misión
 
-1. Crea tu cuenta en [Claude](https://claude.ai). Puedes cambiar el idioma de Claude a español en la configuración.
-2. Resuelve el problema del principio con la ayuda de Claude.
+1. Abre [ChatGPT](https://chatgpt.com/) o [Claude](https://claude.ai/). Si ya usas uno, sigue con ese.
+2. Resuelve el problema del principio con la IA que elegiste.
 3. Pide una versión más corta.
 4. Pide una versión más formal.
 5. Pega en el chat del tutor la versión que enviarías y explica por qué.
+
+Si el tutor de la Academy está disponible, también puedes usarlo para resolver dudas sobre la lección. Está conectado a Allerac One.
 
 **Cómo lo revisa el tutor:** la respuesta final es amable, clara y está en inglés, y el estudiante puede explicar por qué eligió esa versión.
 
 ## Para profundizar
 
-*Por definir: un video introductorio oficial sobre cómo usar Claude (enlace, idioma, subtítulos y fecha de revisión).*
+[Introducción a ChatGPT](https://openai.com/academy/getting-started/) (en inglés).

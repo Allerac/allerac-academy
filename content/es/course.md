@@ -16,7 +16,7 @@ Usar la IA para resolver algo real, tener una cuenta en GitHub y un primer repos
 
 ## Módulo 1: La IA más allá del chat
 
-Qué es un modelo de lenguaje, un prompt, el contexto y un agente. Por qué la IA inventa cosas y cómo comprobar lo que te entrega. La diferencia entre un chat (como Claude) y un agente que trabaja con archivos (como Claude Code y Codex).
+Qué es un modelo de lenguaje, un prompt, el contexto y un agente. Por qué la IA inventa cosas y cómo comprobar lo que te entrega. La diferencia entre un chat (como ChatGPT o Claude) y un agente que trabaja con archivos (como Claude Code y Codex).
 
 ## Módulo 2: Configuración y dónde vive el código
 

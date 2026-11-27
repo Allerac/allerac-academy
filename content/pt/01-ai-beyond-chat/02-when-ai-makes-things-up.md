@@ -31,7 +31,7 @@ A IA é uma colega rápida, mas quem entrega o trabalho é você. Ser bom com IA
 
 ## Missão
 
-1. Peça ao Claude 3 fatos curiosos sobre a sua cidade, com fonte.
+1. Peça à IA 3 fatos curiosos sobre a sua cidade, com fonte.
 2. Confira pelo menos um deles na internet.
 3. Conte ao tutor: estava certo? A fonte existia?
 

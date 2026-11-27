@@ -49,17 +49,9 @@ Before publishing the ticket, paste the text into a conversation with AI and ask
 
 ## Mission
 
-**On the GitHub website (on any device):**
-
-1. Pick a small improvement for the page in your `my-academy-journal`. If you have no idea, use this one: a section with the course modules you have already completed.
-2. In the repository, open the **Issues** tab and click **New issue**.
-3. Write a title with the result, one or two sentences of context and a **Done when** section with two to four criteria as a list.
-4. Ask AI to point out what is ambiguous and adjust what makes sense.
-5. Create the issue and send the tutor the link.
-
-**On a tablet or phone:** the path above works in the browser. Afterwards, GitHub Mobile is handy for following and commenting on the issue.
-
-**How the tutor checks:** the issue exists in `my-academy-journal`, the title describes the result, there is context and a list of two to four criteria that can be checked with "yes" or "no".
+1. Open an issue in `my-academy-journal` titled `Add a completed modules section` and explain why readers would benefit from it.
+2. Under **Done when**, list three criteria: `index.html` contains a `<section id="completed-modules">`, it lists at least one completed module, and the section appears at the public URL with the existing content still visible.
+3. Ask AI to flag anything unclear, publish the issue, and save its number for the PR.
 
 ## Go deeper
 

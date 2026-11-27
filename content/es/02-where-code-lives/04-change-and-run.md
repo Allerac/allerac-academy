@@ -7,9 +7,9 @@ Mejoraste tu página con la ayuda de la IA, pero en GitHub el archivo sigue sien
 ## Bloques
 
 ### 1. Pedir un ajuste y revisar el archivo
-Vuelve a abrir el codespace de `my-academy-journal` (o crea uno, si no lo tienes). Pídele a la IA (Claude en otra pestaña, o el chat del editor, si aparece) una mejora concreta en `index.html`: un color, un texto, una sección nueva. Pega la sugerencia en el archivo, o deja que la IA la aplique, y **lee la diferencia** antes de seguir. Quien firma el cambio eres tú.
+Vuelve a abrir el codespace de `my-academy-journal` (o crea uno, si no lo tienes). Pídele a la IA (el chat de IA que elegiste, o el chat del editor, si aparece) una mejora concreta en `index.html`: un color, un texto, una sección nueva. Pega la sugerencia en el archivo, o deja que la IA la aplique, y **lee la diferencia** antes de seguir. Quien firma el cambio eres tú.
 
-> **Notas para el tutor:** conéctalo con las lecciones 1.2 y 1.5: revisar e iterar. No exijas Claude Code ni Copilot. Basta con un chat en una pestaña al lado. Una mejora pequeña es suficiente.
+> **Notas para el tutor:** conéctalo con las lecciones 1.2 y 1.5: revisar e iterar. Basta con un chat en una pestaña al lado. Una mejora pequeña es suficiente.
 
 ### 2. Ver la página funcionando
 En la terminal de Codespaces, en la carpeta del proyecto, ejecuta:
@@ -38,9 +38,9 @@ En la tableta, si Codespaces es usable (mejor con teclado), sigue el camino prin
 
 En el teléfono, el camino realista es otro. Edita `index.html` en github.com (botón de editar el archivo) o en github.dev (cambia `github.com` por `github.dev` en la URL), pídele la mejora a la IA, pégala y revísala, y haz el commit desde ahí. github.dev **no tiene terminal**, así que no puedes ejecutar `python3 -m http.server` ni ver el servidor local.
 
-Para hacerte una idea del resultado en el teléfono, pídele a Claude que te muestre la página (un artefacto) con el HTML final, o abre el archivo más tarde en una computadora o tableta. Es una vista previa, no lo mismo que ver el archivo servido de verdad. [GitHub Mobile](https://docs.github.com/es/get-started/using-github/github-mobile) ayuda a revisar el commit después, no a ejecutar la página.
+Para hacerte una idea del resultado en el teléfono, comprueba si tu herramienta de IA puede mostrar una vista previa con el HTML final, o abre el archivo más tarde en una computadora o tableta. Es una vista previa, no lo mismo que ver el archivo servido de verdad. [GitHub Mobile](https://docs.github.com/es/get-started/using-github/github-mobile) ayuda a revisar el commit después, no a ejecutar la página.
 
-> **Notas para el tutor:** no recomiendes servicios de vista previa de terceros. Sé explícito: sin terminal no hay servidor local. Acepta el artefacto de Claude o la revisión visual del HTML como vista previa, y el commit en GitHub como la parte obligatoria. En la tableta con Codespaces, pide la vista previa de verdad.
+> **Notas para el tutor:** no recomiendes servicios de vista previa de terceros. Sé explícito: sin terminal no hay servidor local. Acepta una vista previa de la IA o una revisión visual del HTML, y el commit en GitHub como la parte obligatoria. En la tableta con Codespaces, pide la vista previa de verdad.
 
 ## Misión
 
@@ -53,10 +53,12 @@ Para hacerte una idea del resultado en el teléfono, pídele a Claude que te mue
 5. Detén el codespace.
 6. Envía al tutor el enlace del archivo en GitHub y cuenta qué cambió y qué viste en el navegador.
 
+**Opcional en una computadora con [Cursor](https://cursor.com/docs/agent/overview):** si ya tienes Git y Cursor instalados, copia la dirección HTTPS de tu repositorio desde el botón **Code** de GitHub y ejecuta `git clone <URL>` con esa dirección. Abre la carpeta en Cursor y pídele a Agent un cambio pequeño en `index.html`. Revisa los cambios, ejecuta la página desde el terminal como en el camino principal y luego haz el commit.
+
 **Desde la tableta o el teléfono:**
 
 - **En la tableta:** si Codespaces funciona, sigue el camino principal.
-- **En el teléfono:** edita `index.html` en github.com o en github.dev, con ayuda de la IA, y haz el commit. Para la vista previa, usa un artefacto de Claude con el HTML final (o míralo después en una pantalla más grande). Cuéntale al tutor el enlace del archivo, qué cambió, cómo lo revisaste y que no fue posible ejecutar el servidor en el teléfono.
+- **En el teléfono:** edita `index.html` en github.com o en github.dev, con ayuda de la IA, y haz el commit. Usa la vista previa de tu IA si está disponible, o comprueba la página después en una pantalla más grande. Cuéntale al tutor el enlace del archivo, qué cambió, cómo lo revisaste y que no fue posible ejecutar el servidor en el teléfono.
 
 **Cómo lo revisa el tutor:** `index.html` en el repositorio tiene un commit nuevo, con un mensaje claro, y el estudiante describe el cambio. En el camino principal, además vio la página servida en el navegador. En el camino móvil, explica cómo la revisó (vista previa de la IA o pantalla más grande) y el límite de la terminal.
 

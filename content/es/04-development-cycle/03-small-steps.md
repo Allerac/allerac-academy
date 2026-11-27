@@ -52,7 +52,7 @@ Cada paso suele convertirse en un commit, con un mensaje claro (lección 3.1). A
 
 1. Abre la issue que creaste en la lección 4.2.
 2. Pega su texto en una conversación con la IA y pídele que divida la tarea en 3 a 5 pasos pequeños. Recorta, junta o reordena lo que haga falta.
-3. Edita la descripción de la issue y añade una sección **Pasos** con una lista de tareas (`- [ ] ...`).
+3. Edita la descripción de la issue y añade una sección **Pasos** con una lista de tareas (`- [ ] ...`). Pon primero el workflow y después la sección del diario. En la siguiente lección, el primer commit hará que la prueba falle a propósito y el segundo hará que pase.
 4. Cuéntale al tutor por qué elegiste ese orden y cómo vas a comprobar cada paso.
 
 **Desde la tableta o el teléfono:** editar la issue funciona en el navegador. En el teléfono, escribir `- [ ]` es incómodo, pero funciona: comprueba en la vista previa (**Preview**) que aparecieron las casillas.

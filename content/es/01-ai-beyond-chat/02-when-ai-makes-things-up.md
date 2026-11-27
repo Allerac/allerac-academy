@@ -31,7 +31,7 @@ La IA es una compañera rápida, pero quien entrega el trabajo eres tú. Ser bue
 
 ## Misión
 
-1. Pídele a Claude 3 datos curiosos sobre tu ciudad, con fuente.
+1. Pídele a la IA 3 datos curiosos sobre tu ciudad, con fuente.
 2. Comprueba al menos uno de ellos en internet.
 3. Cuéntale al tutor: ¿era correcto? ¿La fuente existía?
 

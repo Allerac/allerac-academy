@@ -43,7 +43,7 @@ The terminal is more comfortable on a computer. On a tablet, GitHub Codespaces o
 
 ## Mission
 
-1. Ask Claude to explain, in simple words, what `pwd`, `ls`, `cd` and `mkdir` do.
+1. Ask AI to explain, in simple words, what `pwd`, `ls`, `cd` and `mkdir` do.
 2. Pick a command you do *not* know (for example, one from a tutorial) and ask: "What does this command do? Does it change or delete anything?"
 3. Tell the tutor, in your own words, what each of the four commands does and what you understood about the unknown command. Say whether you would run it or not, and why.
 

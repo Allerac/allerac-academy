@@ -17,9 +17,9 @@ An agent is an AI that can use tools: read and create files, run commands, searc
 > **Tutor notes:** analogy: a chat is a coworker explaining over the phone how to do it. An agent is a coworker who sits at your computer and does it while you watch.
 
 ### 3. Coding agents
-Claude Code and Codex are agents made for programming. They read the project's files, write code, run tests and explain what they did. These are what you will work with on Allerac projects.
+Cursor Agent, Claude Code and Codex are examples of coding agents. They can read project files, propose changes and run tests. Module 2 includes an optional Cursor path.
 
-> **Tutor notes:** the student will install and use a coding agent in module 2. Here it is only the concept. Do not mix it up with the Claude chat.
+> **Tutor notes:** Use a concrete example: in chat, the student pastes a snippet. In an editor with an agent, the student can point to a project file and review the diff.
 
 ### 4. More power, more care
 An agent really changes your files. So:

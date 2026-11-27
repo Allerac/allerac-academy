@@ -43,7 +43,7 @@ O terminal é mais confortável no computador. No tablet, o GitHub Codespaces ab
 
 ## Missão
 
-1. Peça ao Claude para explicar, em português e com palavras simples, o que fazem `pwd`, `ls`, `cd` e `mkdir`.
+1. Peça à IA para explicar, em português e com palavras simples, o que fazem `pwd`, `ls`, `cd` e `mkdir`.
 2. Escolha um comando que você *não* conhece (por exemplo, um que apareça num tutorial) e pergunte: "O que este comando faz? Ele altera ou apaga alguma coisa?"
 3. Conte ao tutor, com suas palavras, o que cada um dos quatro comandos faz e o que você entendeu do comando desconhecido. Diga se rodaria ou não, e por quê.
 

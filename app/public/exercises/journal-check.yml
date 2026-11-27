@@ -1,0 +1,33 @@
+name: Check journal
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the completed modules section
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class JournalParser(HTMLParser):
+              has_completed_modules = False
+
+              def handle_starttag(self, tag, attrs):
+                  if tag == "section" and dict(attrs).get("id") == "completed-modules":
+                      self.has_completed_modules = True
+
+          journal = JournalParser()
+          journal.feed(Path("index.html").read_text(encoding="utf-8"))
+          if not journal.has_completed_modules:
+              raise SystemExit('Expected <section id="completed-modules"> in index.html')
+          print("Found the completed modules section")
+          PY

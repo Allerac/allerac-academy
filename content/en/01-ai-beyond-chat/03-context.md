@@ -31,7 +31,7 @@ Every conversation starts with an empty desk. If you need something from an old 
 
 ## Mission
 
-1. Start a new conversation in Claude and ask for a short text about a topic you like.
+1. Start a new conversation in your chosen AI chat and ask for a short text about a topic you like.
 2. Start another conversation and ask: "What was the text you wrote about?"
 3. Tell the tutor what happened and why.
 

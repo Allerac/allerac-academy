@@ -36,24 +36,19 @@ Haz un commit por paso y marca el paso en la issue. Cuando termines, abre el PR 
 > **Notas para el tutor:** relaciónalo con la lección 3.6. La palabra clave solo funciona cuando el PR va a la rama predeterminada (`main`). Si el PR resuelve solo una parte de la tarea, el estudiante puede mencionar la issue sin la palabra clave (por ejemplo, "Part of #12"), y no se cierra.
 
 ### 6. Desde la tableta o el teléfono
-Puedes crear la rama y editar el archivo en github.com, haciendo un commit por paso en esa rama. Lo que no puedes es ejecutar la página: github.dev y el editor del sitio no tienen terminal. Para una vista previa, pídele a Claude que muestre la página (un artefacto) con el HTML final, o compruébala después en una pantalla más grande. Escribe en el PR lo que no pudiste probar.
+En el navegador, los commits se guardan directamente en la rama remota. Abre el PR y sigue la prueba en **Checks**. Después del merge, podrás comprobar la página publicada en el teléfono.
 
-> **Notas para el tutor:** los mismos límites de la lección 2.4. Acepta la vista previa de la IA en el camino móvil, pero exige que el estudiante diga en el PR cómo lo comprobó y qué quedó sin probar. Confirma que la rama correcta está seleccionada antes de cada commit.
+> **Notas para el tutor:** Pide los enlaces al PR, al despliegue y a la página publicada. Compara lo que cubre la prueba con lo que el estudiante comprobó en el navegador.
 
 ## Misión
 
-**En la computadora (camino principal):**
+1. En Codespaces, actualiza `main` y crea una rama para la issue. Copia el [workflow de prueba](/exercises/journal-check.yml) a `.github/workflows/journal-check.yml`. Haz un commit solo con el workflow, publícalo con **Publish Branch** (o `git push -u origin HEAD`) y abre un PR hacia `main`. Añade `Closes #N`, sustituyendo `N` por el número de la issue.
+2. En el PR, abre **Checks** y lee el error de **Check journal**. La prueba busca una sección con el ID `completed-modules` en el HTML. La primera ejecución debe fallar porque esa sección todavía no existe.
+3. En la misma rama, añade `<section id="completed-modules">` con un título y al menos un módulo completado. Ejecuta la página, comprueba el contenido anterior y prueba en una ventana estrecha. Haz un segundo commit y envíalo con **Push** (o `git push`). Observa cómo el mismo PR recibe el commit y la prueba pasa.
+4. En la descripción del PR, anota qué comprobaste manualmente. La prueba automática comprueba que la sección exista. Comprueba tú la lista de módulos y la legibilidad en el teléfono.
+5. Abre la URL pública y confirma que la sección todavía no aparece. Pide una revisión si hay alguien disponible y deja el PR abierto para la próxima lección.
 
-1. En el codespace de `my-academy-journal`, actualiza `main` y crea una rama para la issue de las lecciones anteriores.
-2. Para cada paso de la lista: pídele a la IA solo ese paso, lee la diferencia, aplícala, ejecuta la página y comprueba. Haz un commit por paso y marca el paso en la issue.
-3. Al final, comprueba cada criterio de **Terminado cuando** y mira la página en una ventana estrecha.
-4. Publica la rama y abre un PR hacia `main`, con qué, por qué, **cómo comprobar** (lo que probaste) y `Closes #` con el número de la issue.
-5. Todavía no hagas el merge: eso queda para la próxima lección.
-6. Envíale al tutor el enlace del PR.
-
-**Desde la tableta o el teléfono:** crea la rama desde el menú de ramas de github.com, edita `index.html` en esa rama con ayuda de la IA, un commit por paso. Usa un artefacto de Claude como vista previa. Abre el PR en el navegador y di en la descripción lo que no pudiste probar.
-
-**Cómo lo revisa el tutor:** existe una rama con commits de mensajes claros (idealmente uno por paso), los pasos están marcados en la issue, y hay un PR abierto hacia `main` con `Closes #` y una parte **Cómo comprobar** que dice lo que se probó de verdad.
+**En una tableta o un teléfono:** crea la rama y haz ambos commits en el editor de github.com. Cada commit que haces allí ya queda en la rama remota. Comprueba el resultado en **Checks** y revisa el aspecto de la página después del despliegue.
 
 ## Para profundizar
 

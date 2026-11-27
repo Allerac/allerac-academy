@@ -17,9 +17,9 @@ Si la descripción del PR tiene `Closes #` con el número de la issue, el merge 
 > **Notas para el tutor:** si la issue no se cerró, probablemente la palabra clave estaba mal escrita o el PR no fue a `main`. El estudiante puede cerrar la issue a mano y mencionar el PR en un comentario.
 
 ### 3. Comprobar después del merge
-"Funcionó en mi rama" no es lo mismo que "funciona en `main`". Después del merge, comprueba la versión que la gente va a usar. En un equipo con despliegue automático, espera a que termine el despliegue (en la pestaña **Actions**), abre el sitio en línea y vuelve a recorrer los criterios de **Terminado cuando**. En tu repositorio personal, vuelve a `main`, actualízala y ejecuta la página.
+Después del merge, espera el despliegue de GitHub Pages en **Actions**. Abre la URL pública del diario y vuelve a comprobar los criterios de aceptación.
 
-> **Notas para el tutor:** en allerac-academy, eso significa esperar a que "Deploy" se ponga en verde en la pestaña Actions y abrir academy.allerac.ai. Publicar la página personal en internet queda para el módulo 6.
+> **Notas para el tutor:** Pide los enlaces al PR, al despliegue y a la página publicada. Compara lo que cubre la prueba con lo que el estudiante comprobó en el navegador.
 
 ### 4. Si algo salió mal
 Pasa, incluso a gente con experiencia. Mantén la calma y elige un camino:
@@ -36,26 +36,18 @@ Un comentario corto en la issue o en el PR avisa a todos: "Ya entró y está en 
 > **Notas para el tutor:** el tono es el de las lecciones 3.3 y 3.6: específico y breve. No hace falta mencionar a nadie en un repositorio personal.
 
 ### 6. Desde la tableta o el teléfono
-Hacer el merge, borrar la rama, ver si la issue se cerró y comentar funcionan en el sitio de GitHub desde el navegador. GitHub Mobile ayuda a seguir los avisos y responder a los comentarios. Sin terminal, no puedes ejecutar la página de `main` en el teléfono: abre el `index.html` de `main` en github.com y usa un artefacto de Claude como vista previa, o compruébalo después en una pantalla más grande.
+En el navegador del teléfono puedes hacer el merge, seguir el despliegue, abrir el sitio publicado y comentar en la issue.
 
-> **Notas para el tutor:** acepta la comprobación con la vista previa en el camino móvil, siempre que el estudiante diga cómo lo comprobó. No prometas que la app hace todo lo que hace el sitio.
+> **Notas para el tutor:** Pide los enlaces al PR, al despliegue y a la página publicada. Compara lo que cubre la prueba con lo que el estudiante comprobó en el navegador.
 
 ## Misión
 
-**En la computadora (camino principal):**
+1. En el PR de la lección 4.4, comprueba **Files changed**, la revisión si la hubo y el resultado en verde en **Checks**. Haz el merge en `main` y confirma que la issue se cerró.
+2. En **Actions**, abre el despliegue de Pages iniciado por el merge. Si falla, lee el paso con error y anota qué falta corregir.
+3. Cuando termine el despliegue, abre la misma URL de la lección 4.1. Comprueba que la sección nueva aparece, que muestra un módulo completado y que el contenido anterior sigue visible. Abre la página en un teléfono o estrecha la ventana.
+4. Comenta en la issue con enlaces al PR, a la ejecución del despliegue y a la página pública. Indica qué comprobaste en el sitio publicado.
 
-1. En el PR de la lección 4.4, haz una última revisión en la pestaña **Files changed**.
-2. Haz el merge y borra la rama.
-3. Comprueba que la issue se cerró sola y que la lista de pasos está toda marcada.
-4. En el codespace, vuelve a `main`, actualízala, ejecuta la página y comprueba otra vez cada criterio de **Terminado cuando**.
-5. Deja un comentario corto en la issue diciendo qué comprobaste después del merge.
-6. Envíale al tutor el enlace de la issue.
-
-**Extra (opcional):** si tu PR de la lección 3.6 en allerac-academy ya entró, abre la pestaña **Actions** del repositorio, encuentra el "Deploy" que se ejecutó después del merge y busca tu cambio en [academy.allerac.ai](https://academy.allerac.ai).
-
-**Desde la tableta o el teléfono:** haz el merge y borra la rama desde el navegador, comprueba la issue y usa un artefacto de Claude con el `index.html` de `main` como vista previa. En el comentario, di cómo lo comprobaste.
-
-**Cómo lo revisa el tutor:** el PR tiene merge, la issue se cerró vinculada a él, la rama se borró, y hay un comentario en la issue que dice qué se comprobó después del merge (y cómo, en el camino móvil).
+**En una tableta o un teléfono:** sigue los mismos pasos en el navegador y abre la página publicada en el dispositivo.
 
 ## Para profundizar
 

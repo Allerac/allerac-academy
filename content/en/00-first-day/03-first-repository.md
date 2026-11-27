@@ -26,12 +26,12 @@ A good commit message is short and says what you did: "Add introduction to READM
 ### 4. Why in English
 In the software world, code and code documentation are written in English, so anyone in the world can understand them. You do not need to be fluent: AI helps.
 
-> **Tutor notes:** reassure the student. Encourage them to use Claude to check their English.
+> **Tutor notes:** reassure the student. Encourage them to use AI to check their English.
 
 ## Mission
 
 1. Create a repository called `my-academy-journal`, ticking the option to add a README.
-2. Edit the README in the browser and write 3 lines in English about yourself and why you are taking this course (you can ask Claude for help).
+2. Edit the README in the browser and write 3 lines in English about yourself and why you are taking this course (you can ask AI for help).
 3. Save it with a commit that has a clear message, for example `Add introduction to README`.
 4. Send the tutor the link to the repository.
 

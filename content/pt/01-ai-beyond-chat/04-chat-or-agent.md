@@ -17,9 +17,9 @@ Um agente é uma IA que pode usar ferramentas: ler e criar arquivos, rodar coman
 > **Notas para o tutor:** analogia: o chat é um colega que te explica pelo telefone como fazer. O agente é um colega que senta no seu computador e faz, enquanto você acompanha.
 
 ### 3. Agentes de código
-O Claude Code e o Codex são agentes feitos para programar. Eles leem os arquivos do projeto, escrevem código, rodam testes e explicam o que fizeram. É com eles que você vai trabalhar nos projetos da Allerac.
+Cursor Agent, Claude Code e Codex são exemplos de agentes de programação. Eles podem ler arquivos do projeto, propor mudanças e rodar testes. Você vai conhecer um caminho opcional com Cursor no módulo 2.
 
-> **Notas para o tutor:** o aluno vai instalar e usar um agente de código no módulo 2. Aqui é só o conceito. Não confunda com o chat do Claude.
+> **Notas para o tutor:** Use um exemplo concreto: no chat, o aluno cola um trecho. No editor com um agente, ele pode apontar para o arquivo do projeto e revisar a diferença.
 
 ### 4. Mais poder, mais cuidado
 Um agente mexe de verdade nos seus arquivos. Por isso:

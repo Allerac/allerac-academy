@@ -7,7 +7,7 @@ You want a page on the internet to introduce yourself, but you do not know how t
 ## Blocks
 
 ### 1. What an artifact is
-An artifact is something concrete that AI creates for you: a web page, a document, a diagram, a small app. In the Claude chat, it appears next to the conversation, and you can see the result right away.
+An artifact is something concrete that AI creates for you: a web page, a document or a diagram. If your tool offers a preview, as Claude does with Artifacts, you can check the result there.
 
 > **Tutor notes:** show that an artifact is not only code: it is anything you use or publish.
 
@@ -24,13 +24,15 @@ The first version is rarely the final one. Ask for changes: colors, text, a new 
 ### 4. Keep it with its history
 The file the AI created goes into your repository, with a commit. That way you keep every version of your page.
 
-> **Tutor notes:** in module 6, this page goes live on a server. You can mention it as a "spoiler".
+> **Tutor notes:** in module 4, this page goes live on a server. You can mention it as a "spoiler".
 
 ## Mission
 
-1. Ask Claude: "Create a simple web page, in a single HTML file, to introduce me." Tell it your name, what you like and why you are learning tech.
+1. Ask AI: "Create a simple web page, in a single HTML file, to introduce me." Tell it your name, what you like and why you are learning tech.
 2. Ask for at least 2 changes.
-3. Download the file and upload it to your `my-academy-journal` repository with the name `index.html` (the "Add file" button and then "Upload files" on GitHub).
+3. Save the result as `index.html`. If the AI only shows code, choose **Add file → Create new file** on GitHub, name it `index.html` and paste the HTML. If you downloaded the file, use **Add file → Upload files**.
+
+   Open the saved file in a browser or check the preview if there is one. On a phone, if you cannot open the page, review the HTML and try the page when you have access to a computer.
 4. Commit it with a clear message, for example `Add personal web page`.
 5. Send the tutor the link to the file on GitHub.
 

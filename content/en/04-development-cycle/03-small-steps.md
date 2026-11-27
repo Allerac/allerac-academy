@@ -52,7 +52,7 @@ Each step usually becomes a commit, with a clear message (lesson 3.1). That way 
 
 1. Open the issue you created in lesson 4.2.
 2. Paste its text into a conversation with AI and ask it to break the task into 3 to 5 small steps. Cut, merge or reorder whatever you need.
-3. Edit the issue description and add a **Steps** section with a task list (`- [ ] ...`).
+3. Edit the issue description and add a **Steps** section with a task list (`- [ ] ...`). Put the workflow first and the journal section second. In the next lesson, the first commit will make the test fail on purpose, and the second will make it pass.
 4. Tell the tutor why you chose that order and how you will check each step.
 
 **On a tablet or phone:** editing the issue works in the browser. On a phone, typing `- [ ]` is fiddly, but it works: check the **Preview** to see whether the checkboxes appeared.
